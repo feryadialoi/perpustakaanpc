@@ -1,0 +1,422 @@
+@font-face {
+   font-family: 'Material Icons';
+   font-style: normal;
+   font-weight: 400;
+   src: url(iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+   src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(../assets/material-design-icons-2.2.0/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+        url(../assets/material-design-icons-2.2.0/iconfont/MaterialIcons-Regular.woff) format('woff'),
+        url(../assets/material-design-icons-2.2.0/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.login-title{
+  color:white;
+}
+
+.panel_{
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  margin-top: 10%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.panel_heading{
+  background: #2455f4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+.panel_body{
+  background: white;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+
+}
+/* login form part */
+.bg-img{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.bg-blur {
+  background: rgba(255,255,255,.3);
+  /* background: rgba(36,85,244,.3); */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  background-position: center;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+
+
+/* admin/index.php */
+body {
+    font-family: "segoe ui";
+    margin: 0;
+    background-color: #f8f9fd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #1f41b5;
+}
+.tab a.active {
+    background-color: #1f41b5;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #1f41b5;
+}
+.tab a:hover {
+    background-color: #1f41b5;
+    text-decoration: none;
+}
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+}
+.tab a {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+    text-decoration:none;
+}
+
+i{
+  padding-top: 5px;
+  /* top: 0%;
+  left: 50%; */
+  transform: translateX(0%) translateY(20%);
+}
+/* Style the tab */
+.tab {
+    float: left;
+    /* border: 1px solid #ccc; */
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2455f4;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+
+/*
+  darkblue: #1f41b5;
+  blue: #2455f4;
+*/
+
+.main {
+    transition: margin-left 0.5s;
+    margin-left: 250px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+a{
+  color: white;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.top-bar{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 60px;
+  background-color: #1f41b5;
+  color: white;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.top-bar-menu{
+  display: inline-block;
+}
+.top-bar .top-bar-menu ul li{
+  display: inline-block;
+  font-size: 18px;
+}
+.top-bar .hamburger{
+  display: inline-block;
+}
+.hamburger-button {
+  margin-top: 0;
+  display: block;
+  background-color: #1f41b5;
+  /* background-color: inherit; */
+  color: white;
+  padding-left: 10px ;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 6px;
+  margin-left: 8px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+}
+.hamburger button:hover {
+    background-color: #2455f4;
+}
+
+/* modal */
+
+
+/* Extra styles for the cancel button */
+.modalbtnwidth{
+  width: 80px;
+  /* padding: 8px 18px; */
+}
+.modalawidth{
+  width: 80px;
+  /* padding: 9px 32px 10px 32px; */
+}
+.modalbtn {
+    width: 80px;
+    padding: 8px 18px;
+    background-color: #2455f4;
+    color: white;
+    border: none;
+}
+.modala {
+  width: 80px;
+  padding: 9px 32px 10px 32px;
+  background-color: #2455f4;
+  color: white;
+  text-decoration: none;
+}
+.modalinp {
+  width: 80px;
+  padding: 9px 32px 10px 32px;
+  background-color: #2455f4;
+  color: white;
+  text-decoration: none;
+}
+
+/* Center the image and position the close button */
+.head {
+    text-align: center;
+    margin: 6px 0 6px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+div.logout-btn {
+    float: right;
+    padding-top: 16px;
+}
+div.logout-btn2 {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 100px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 350px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    div.logout-btn {
+       display: block;
+       float: none;
+    }
+
+    .modalbtn {
+       width: 100%;
+    }
+    .modala {
+       width: 100%;
+    }
+    .modalinp{
+      width: 100%;
+    }
+}
+
+.logout-btn button:hover {
+    background-color: #1f41b5;
+}
+.logout-btn a:hover {
+    background-color: #1f41b5;
+    color: white;
+    text-decoration: none;
+}
+.logout-button {
+  padding-left: 16px ;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+.hamburger i{
+  padding:0;
+
+}
+.hamburger-logout{
+  position: relative;
+  float: right;
+  margin-right: 266px;
+  transition: margin-left 0.5s;
+  transition: margin-right 0.5s;
+}
+.admin {
+  color: #2455f4;
+}
+
+.sub-main {
+  width: 100%;
+  height: 100%;
+  float: right;
+  padding: 20px;
+  transition: 0.5s;
+}
+.content{
+  margin-top: 60px;
+  /* height: 100%; */
+  /* height: 885px; */
+  min-height: 885px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.float-tombol{
+  float: right;
+
+}
