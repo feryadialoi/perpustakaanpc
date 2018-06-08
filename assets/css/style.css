@@ -196,16 +196,17 @@ a{
 }
 .top-bar{
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   background-color: #1f41b5;
   color: white;
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .top-bar-menu{
   display: inline-block;
+  padding-left: 8px;
 }
 .top-bar .top-bar-menu ul li{
   display: inline-block;
@@ -231,7 +232,6 @@ a{
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 18px;
 }
 .hamburger button:hover {
     background-color: #2455f4;
@@ -390,7 +390,8 @@ div.logout-btn2 {
 .hamburger-logout{
   position: relative;
   float: right;
-  margin-right: 266px;
+  /* margin-right: 266px; */
+  margin-right: 16px;
   transition: margin-left 0.5s;
   transition: margin-right 0.5s;
 }

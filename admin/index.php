@@ -26,12 +26,54 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <script type="text/javascript" src="../assets/js/jquery.js"></script>
   <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- TABLE STYLES-->
   <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
   <link rel="shortcut icon" href="../assets/img/logo.png">
 </head>
 <body>
+  <!-- topbar menu start -->
+  <div class="top-bar">
+    <div class="hamburger">
+      <button class="hamburger-button" onclick="toggleNav()"><i class="material-icons logout-button">menu</i></button>
+    </div>
+    <div id="logoutButton" class="hamburger hamburger-logout">
+      <button class="hamburger-button" onclick="document.getElementById('modallogout').style.display='block'" ><i class="material-icons logout-button">exit_to_app</i> Logout</button>
+    </div>
+    <div class="top-bar-menu">
+      <?php
+      date_default_timezone_set("Asia/Jakarta");
+        function hari(){
+            switch (date("N")) {
+              case '1':
+                $hari = "Senin";
+                break;
+              case '2':
+                $hari = "Selasa";
+                break;
+              case '3':
+                $hari = "Rabu";
+                break;
+              case '4':
+                $hari = "Kamis";
+                break;
+              case '5':
+                $hari = "Jumat";
+                break;
+              case '6':
+                $hari = "Sabtu";
+                break;
+              case '7':
+                $hari = "Minggu";
+                break;
+            }
+            return($hari);
+        }
+        $tanggal = hari().", ". date("j M Y");
+        echo $tanggal;
+      ?>
+    </div>
+  </div>
+  <!-- topbar menu end -->
   <!-- sidenav start -->
   <div id="mySidenav" class="sidenav tab">
     <!-- logo dan tagline start -->
@@ -55,24 +97,7 @@
 
   <!-- main start -->
   <div id="main" class="main">
-    <!-- topbar menu start -->
-    <div class="top-bar">
-      <div class="hamburger">
-        <button class="hamburger-button" onclick="toggleNav()"><i class="material-icons logout-button">menu</i></button>
-      </div>
-      <div id="logoutButton" class="hamburger hamburger-logout">
-        <button class="hamburger-button" onclick="document.getElementById('modallogout').style.display='block'" ><i class="material-icons logout-button">exit_to_app</i> Logout</button>
-      </div>
-      <!-- <div class="top-bar-menu">
-        <ul>
-        <li><a href=""><i class="material-icons"></i>Senin, 28 Mei 2018</a></li>
-        <li><a href="#">News <span class="badge">5</span></a><br></li>
-        <li><a href="#">Comments <span class="badge">10</span></a><br></li>
-        <li><a href="#">Updates <span class="badge">2</span></a></li>
-        </ul>
-      </div> -->
-    </div>
-    <!-- topbar menu end -->
+
     <div class="sub-main">
         <div class="content">
           <?php
@@ -166,21 +191,21 @@
   function toggleNav() {
     var x = document.getElementById("mySidenav");
     var y = document.getElementById("main");
-    var z = document.getElementById('logoutButton');
+    // var z = document.getElementById('logoutButton');
     if (x.style.width === "0px" || y.style.marginLeft === "0px") {
       // sidenav open
       // x.style.width = "250px";
       x.style.marginLeft = "0px";
       x.style.marginRight = "250px";
       y.style.marginLeft = "250px";
-      z.style.marginRight = "266px";
+      // z.style.marginRight = "266px";
     } else{
       // sidenav close
       // x.style.width = "0px";
       x.style.marginLeft = "-250px";
       x.style.marginRight = "0px";
       y.style.marginLeft = "0px";
-      z.style.marginRight = "16px";
+      // z.style.marginRight = "16px";
     }
   }
   </script>
@@ -227,5 +252,26 @@
   $cou = mysqli_num_rows($res);
   // echo $cou;
 ?>
+
+<script src="../assets/js/dataTables/jquery.dataTables.js"></script>
+<script src="../assets/js/dataTables/dataTables.bootstrap.js"></script>
+<script>
+          $(document).ready(function () {
+              $('#dataTables-example').dataTable();
+          });
+</script>
+<script type="text/javascript">
+
+    function stopRKey(evt) {
+      var evt = (evt) ? evt : ((event) ? event : null);
+      var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+      if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+    }
+
+    document.onkeypress = stopRKey;
+
+</script>
+<!-- CUSTOM SCRIPTS -->
+<script src="../assets/js/custom.js"></script>
 </body>
 </html>

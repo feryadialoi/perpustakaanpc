@@ -7,7 +7,7 @@
              Data Buku
         </div>
         <div class="panel-body">
-          <!-- <div class="table-responsive"> -->
+          <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
               <thead>
                 <tr>
@@ -43,7 +43,7 @@
 
                   <?php } ?>
                 </tbody>
-          <!-- </div> -->
+          </div>
         </div>
     </div>
   </div>
