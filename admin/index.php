@@ -25,9 +25,9 @@
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <script type="text/javascript" src="../assets/js/jquery.js"></script>
-  <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+   <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
   <!-- TABLE STYLES-->
-  <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+  <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
   <link rel="shortcut icon" href="../assets/img/logo.png">
 </head>
 <body>
@@ -102,8 +102,6 @@
         <div class="content">
           <?php
             error_reporting(E_ALL ^ E_NOTICE);
-            // $page = isset($_GET['page']);
-            // $aksi = isset($_GET['aksi']);
             $page = $_GET['page'];
             $aksi = $_GET['aksi'];
 
@@ -120,6 +118,9 @@
                 }
                 elseif ($aksi=="hapus"){
                   include "../page/anggota/hapus.php";
+                }
+                elseif ($aksi=="coba"){
+                  include "../page/anggota/coba.php";
                 }
               }
               else {
