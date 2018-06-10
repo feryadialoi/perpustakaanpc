@@ -1,7 +1,7 @@
-<?php echo "ini page tambah buku" ?>
-<div class="float-tombol">
+<!-- <div class="float-tombol">
   <a class="btn btn-primary" href="?page=buku">Kembali</a>
-</div>
+</div> -->
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku">Kembali</a>
 <div class="panel panel-default">
 <div class="panel-heading">
   Tambah Data Buku
@@ -40,7 +40,7 @@
                                        </div>
                                        <div class="form-group">
                                             <label>Tahun Terbit</label>
-                                            <select class="form-control" name="tahun_Terbit">
+                                            <select style="height:34px;"  class="form-control" name="tahun_Terbit">
                                               <?php
                                                   $tahun =date("Y");
 
@@ -66,7 +66,7 @@
                                         </div>
                                         <div class="form-group">
                                              <label>Lokasi Buku</label>
-                                             <select class="form-control" name="lokasi">
+                                             <select style="height:34px;"  class="form-control" name="lokasi">
                                                  <option value="rak1">Rak 1</option>
                                                  <option value="rak2">Rak 2</option>
                                                  <option value="rak3">Rak 3</option>

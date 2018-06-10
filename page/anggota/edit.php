@@ -1,7 +1,7 @@
-ini page edit anggota
-<div class="float-tombol">
-  <a class="btn btn-primary" href="?page=anggota">Kembali</a>
-</div>
+<!-- <div class="float-tombol">
+  <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
+</div> -->
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
 <?php
 
 $nis= $_GET['id'];
@@ -45,7 +45,7 @@ $tingkat_A=$tampil['tingkat'];
                                          </div>
                                          <div class="form-group">
                                               <label>Jenis Kelamin</label>
-                                              <select class="form-control" name="jk">
+                                              <select style="height:34px;" class="form-control" name="jk">
                                                   <option value="l"<?php if ($jk_A== 'l') {echo "selected";}?>>Laki - Laki</option>
                                                   <option value="p"<?php if ($jk_A== 'p') {echo "selected";}?>>Perempuan</option>
                                               </select>
@@ -54,7 +54,7 @@ $tingkat_A=$tampil['tingkat'];
 
                                           <div class="form-group">
                                                <label>Tingkat</label>
-                                               <select class="form-control" name="tingkat">
+                                               <select style="height:34px;" class="form-control" name="tingkat">
                                                    <option value="TK/PG"<?php if ($tingkat_A== 'TK/PG') {echo "selected";}?>>TK/PG</option>
                                                    <option value="SD"<?php if ($tingkat_A== 'SD') {echo "selected";}?>>SD</option>
                                                    <option value="SMP"<?php if ($tingkat_A== 'SMP') {echo "selected";}?>>SMP</option>

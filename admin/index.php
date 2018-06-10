@@ -21,11 +21,10 @@
   <title>Anggota - Perpustakaan Pelita Cemerlang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  <!-- <link rel="stylesheet" href="../assets/css/bootstrap.ba.css"> -->
-  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.ba.css">
+  <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script type="text/javascript" src="../assets/js/jquery.js"></script>
-   <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+
   <!-- TABLE STYLES-->
   <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -79,9 +78,9 @@
   <div id="mySidenav" class="sidenav tab">
     <!-- logo dan tagline start -->
     <div style="background:white;padding:10px;">
-      <h2 class="admin" style="margin-left: 60px;">ADMIN</h2>
-      <img src="../assets/img/logo.png" alt="logo">
-      <h2 style="margin-left: 16px;">Perpustakaan</h2>
+      <h2 id="admin" class="admin">ADMIN</h2>
+      <center><img src="../assets/img/logo.png" style="width:230px;" alt="logo"></center>
+      <h2 style="text-align: Center;">Perpustakaan</h2>
     </div>
     <!-- logo dan tagline end -->
     <!-- menu sidenav start -->
@@ -227,7 +226,7 @@
       </p>
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="container-modal">
       <!-- <div class="logout-btn"> -->
       <div class="logout-btn2">
         <a href="logout.php" class="btn btn-danger modalawidth">Ya</a>
@@ -254,6 +253,9 @@
   $cou = mysqli_num_rows($res);
   // echo $cou;
 ?>
+
+<script type="text/javascript" src="../assets/js/jquery.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 
 <script src="../assets/js/dataTables/jquery.dataTables.js"></script>
 <script src="../assets/js/dataTables/dataTables.bootstrap.js"></script>

@@ -1,8 +1,7 @@
-ini page tambah anggota
-<div class="float-tombol">
+<!-- <div class="float-tombol">
   <a class="btn btn-primary" href="?page=anggota">Kembali</a>
-</div>
-
+</div> -->
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
 <div class="panel panel-default">
 <div class="panel-heading">
   Tambah Data Anggota
@@ -34,7 +33,7 @@ ini page tambah anggota
                                         </div>
                                         <div class="form-group">
                                              <label>Jenis Kelamin</label>
-                                             <select class="form-control" name="jk">
+                                             <select style="height:34px;"  class="form-control" name="jk">
                                                  <option value="l" >Laki - Laki</option>
                                                  <option value="p" >Perempuan</option>
                                              </select>
@@ -43,7 +42,7 @@ ini page tambah anggota
 
                                          <div class="form-group">
                                               <label>Tingkat</label>
-                                              <select class="form-control" name="tingkat">
+                                              <select style="height:34px;" class="form-control" name="tingkat">
                                                   <option value="TK/PG" >TK/PG</option>
                                                   <option value="SD" >SD</option>
                                                   <option value="SMP" >SMP</option>

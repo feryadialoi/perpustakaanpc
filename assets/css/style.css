@@ -1,41 +1,4 @@
-@font-face {
-   font-family: 'Material Icons';
-   font-style: normal;
-   font-weight: 400;
-   src: url(iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-   src: local('Material Icons'),
-        local('MaterialIcons-Regular'),
-        url(../assets/material-design-icons-2.2.0/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-        url(../assets/material-design-icons-2.2.0/iconfont/MaterialIcons-Regular.woff) format('woff'),
-        url(../assets/material-design-icons-2.2.0/iconfont/MaterialIcons-Regular.ttf) format('truetype');
-}
 
-
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
 
 .login-title{
   color:white;
@@ -116,8 +79,8 @@ body {
     display: block;
     background-color: inherit;
     color: white;
-    padding-top: 8px;
-    padding-bottom: 16px;
+    padding-top: 6px;
+    padding-bottom: 14px;
     padding-left: 16px;
     width: 100%;
     border: none;
@@ -125,14 +88,14 @@ body {
     text-align: left;
     cursor: pointer;
     transition: 0.5s;
-    font-size: 17px;
+    font-size: 14px;
 }
 .tab a {
     display: block;
     background-color: inherit;
     color: white;
-    padding-top: 8px;
-    padding-bottom: 16px;
+    padding-top: 6px;
+    padding-bottom: 14px;
     padding-left: 16px;
     width: 100%;
     border: none;
@@ -140,36 +103,38 @@ body {
     text-align: left;
     cursor: pointer;
     transition: 0.5s;
-    font-size: 17px;
+    font-size: 14px;
     text-decoration:none;
 }
 
 i{
-  padding-top: 5px;
+  /* padding-top: 10px; */
+  font-size: 30px;
   /* top: 0%;
   left: 50%; */
-  transform: translateX(0%) translateY(20%);
+  transform: translateX(0%) translateY(25%);
 }
 /* Style the tab */
 .tab {
     float: left;
     /* border: 1px solid #ccc; */
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     width: 30%;
     height: 300px;
 }
 
 
 .sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #2455f4;
-    overflow-x: hidden;
-    transition: 0.5s;
+  margin-top: 44px;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2455f4;
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
 
@@ -179,12 +144,12 @@ i{
 */
 
 .main {
-    transition: margin-left 0.5s;
-    margin-left: 250px;
-    height: 100%;
-    position: relative;
-    z-index: 2;
-    transition: 0.5s;
+  transition: margin-left 0.5s;
+  margin-left: 250px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  transition: 0.5s;
 }
 
 a{
@@ -198,11 +163,11 @@ a{
   position: fixed;
   z-index: 3;
   width: 100%;
-  min-height: 60px;
+  min-height: 44px;
   background-color: #1f41b5;
   color: white;
-  padding-top: 10px;
-  font-size: 18px;
+  padding-top: 2px;
+  font-size: 14px;
 }
 .top-bar-menu{
   display: inline-block;
@@ -210,22 +175,18 @@ a{
 }
 .top-bar .top-bar-menu ul li{
   display: inline-block;
-  font-size: 18px;
 }
 .top-bar .hamburger{
   display: inline-block;
 }
 .hamburger-button {
-  margin-top: 0;
   display: block;
   background-color: #1f41b5;
-  /* background-color: inherit; */
   color: white;
-  padding-left: 10px ;
+  padding-left: 8px ;
   padding-right: 4px;
-  padding-top: 2px;
-  padding-bottom: 6px;
-  margin-left: 8px;
+  padding-bottom: 10px;
+  margin-left: 4px;
   width: 100%;
   border: none;
   outline: none;
@@ -283,17 +244,14 @@ img.avatar {
     border-radius: 50%;
 }
 
-.container {
+.container-modal {
     padding: 16px;
+    background-color:#f1f1f1;
 }
 
-div.logout-btn {
-    float: right;
-    padding-top: 16px;
-}
 div.logout-btn2 {
     float: right;
-    padding-top: 16px;
+    /* padding-top: 16px; */
 }
 
 /* The Modal (background) */
@@ -316,7 +274,7 @@ div.logout-btn2 {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 350px; /* Could be more or less, depending on screen size */
+    max-width: 350px; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -391,11 +349,12 @@ div.logout-btn2 {
   position: relative;
   float: right;
   /* margin-right: 266px; */
-  margin-right: 16px;
+  margin-right: 8px;
   transition: margin-left 0.5s;
   transition: margin-right 0.5s;
 }
 .admin {
+  text-align: center;
   color: #2455f4;
 }
 
@@ -407,10 +366,10 @@ div.logout-btn2 {
   transition: 0.5s;
 }
 .content{
-  margin-top: 60px;
+  margin-top: 44px;
   /* height: 100%; */
   /* height: 885px; */
-  min-height: 885px;
+  min-height: 900px;
   padding: 10px;
   background: #fff;
   border-radius: 5px;
@@ -420,4 +379,7 @@ div.logout-btn2 {
 .float-tombol{
   float: right;
 
+}
+select.form-control-custom{
+  height: 34px;
 }

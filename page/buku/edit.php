@@ -1,7 +1,7 @@
-<?php echo "ini page edit buku" ?>
-<div class="float-tombol">
+<!-- <div class="float-tombol">
   <a class="btn btn-primary" href="?page=buku">Kembali</a>
-</div>
+</div> -->
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku">Kembali</a>
 <?php $id= $_GET['id'];
 $sql = $koneksi->query("select * from tb_buku where id='$id'");
 
