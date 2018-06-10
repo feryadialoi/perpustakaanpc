@@ -5,7 +5,7 @@
   session_start();
   //
   //cek apakah user telah login, jika belum login maka di alihkan ke halaman Login
-  if($_SESSION['status'] !="loginAdmin") {
+  if($_SESSION['status'] !="loginUser") {
     header("location:../index.php");
   }
   $koneksi = new mysqli ("localhost","root","","perpustakaan");
@@ -97,7 +97,7 @@
   <div id="mySidenav" class="sidenav tab">
     <!-- logo dan tagline start -->
     <div style="background:white;padding:10px;">
-      <h2 id="admin" class="admin">ADMIN</h2>
+      <h2 id="admin" class="admin">USER</h2>
       <center><img src="../assets/img/logo.png" style="width:230px;" alt="logo"></center>
       <h2 style="text-align: Center;">Perpustakaan</h2>
     </div>
@@ -119,7 +119,6 @@
 
     <div class="sub-main">
         <div class="content">
-
           <?php
             error_reporting(E_ALL ^ E_NOTICE);
             $page = $_GET['page'];
