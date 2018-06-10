@@ -2,6 +2,7 @@
   <a class="btn btn-primary" href="?page=buku">Kembali</a>
 </div> -->
 <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku">Kembali</a>
+
 <div class="panel panel-default">
 <div class="panel-heading">
   Tambah Data Buku
@@ -93,6 +94,8 @@
 </div>
 </div>
 </div>
+
+
 
 <!-- entah kenapa tanggal inputnya tidak berjalan -->
 <!-- problem solved tanggal bisa berjalan -->

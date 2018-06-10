@@ -161,7 +161,7 @@ a{
 }
 .top-bar{
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   min-height: 44px;
   background-color: #1f41b5;
@@ -258,7 +258,7 @@ div.logout-btn2 {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 4; /* Sit on top */
+    z-index: 5; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
