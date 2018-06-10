@@ -28,6 +28,7 @@
    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
   <!-- TABLE STYLES-->
   <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="shortcut icon" href="../assets/img/logo.png">
 </head>
 <body>
