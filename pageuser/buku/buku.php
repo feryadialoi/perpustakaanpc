@@ -36,7 +36,7 @@
                     <td><?php echo $data['jumlah_buku'];?></td>
                     <td>
                       <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info">Edit</a>
-                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a>
+                      <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a> -->
                     </td>
                   </tr>
 

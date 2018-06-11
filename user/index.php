@@ -72,7 +72,7 @@
         echo $tanggal;
       ?>
     </div>
-    <div class="top-bar-menu" style="color:red; padding-left:20px;">
+    <div class="top-bar-menu" style="color:yellow; padding-left:20px; font-size:14px;">
       <?php
         include '../koneksi.php';
         // session_start();
@@ -92,6 +92,7 @@
       ?>
     </div>
   </div>
+  </div>
   <!-- topbar menu end -->
   <!-- sidenav start -->
   <div id="mySidenav" class="sidenav tab">
@@ -104,12 +105,12 @@
     <!-- logo dan tagline end -->
     <!-- menu sidenav start -->
     <a href="index.php"><i class="material-icons">dashboard</i> Dashboard</a>
-    <a href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a>
-    <a href="?page=buku"><i class="material-icons">book</i> Buku</a>
-    <a href="?page=peminjaman"><i class="material-icons">unarchive</i> Peminjaman</a>
-    <a href="?page=pengembalian"><i class="material-icons">archive</i> Pengembalian</a>
-    <a href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
-    <a href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a>
+    <a href="?pageuser=anggota"><i class="material-icons">account_box</i> Anggota</a>
+    <a href="?pageuser=buku"><i class="material-icons">book</i> Buku</a>
+    <a href="?pageuser=peminjaman"><i class="material-icons">unarchive</i> Peminjaman</a>
+    <a href="?pageuser=pengembalian"><i class="material-icons">archive</i> Pengembalian</a>
+    <a href="?pageuser=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
+    <a href="?pageuser=pengaturan"><i class="material-icons">settings</i> Pengaturan</a>
     <!-- menu sidenav end -->
   </div>
   <!-- sidenav end -->
@@ -121,7 +122,7 @@
         <div class="content">
           <?php
             error_reporting(E_ALL ^ E_NOTICE);
-            $page = $_GET['page'];
+            $page = $_GET['pageuser'];
             $aksi = $_GET['aksi'];
 
 
@@ -130,47 +131,47 @@
             if($page == "anggota"){
               if (isset($_GET['aksi'])){
                 if ($aksi=="tambah"){
-                  include "../page/anggota/tambah.php";
+                  include "../pageuser/anggota/tambah.php";
                 }
                 elseif ($aksi=="edit"){
-                  include "../page/anggota/edit.php";
+                  include "../pageuser/anggota/edit.php";
                 }
                 elseif ($aksi=="hapus"){
-                  include "../page/anggota/hapus.php";
+                  include "../pageuser/anggota/hapus.php";
                 }
                 elseif ($aksi=="coba"){
-                  include "../page/anggota/coba.php";
+                  include "../pageuser/anggota/coba.php";
                 }
               }
               else {
-                include "../page/anggota/anggota.php";
+                include "../pageuser/anggota/anggota.php";
               }
             }
             // page buku: tambah, edit, hapus
             elseif($page == "buku"){
               if (isset($_GET['aksi'])){
                 if ($aksi=="tambah"){
-                  include "../page/buku/tambah.php";
+                  include "../pageuser/buku/tambah.php";
                 }
                 elseif ($aksi=="edit"){
-                  include "../page/buku/edit.php";
+                  include "../pageuser/buku/edit.php";
                 }
                 elseif ($aksi=="hapus"){
-                  include "../page/buku/hapus.php";
+                  include "../pageuser/buku/hapus.php";
                 }
               }
               else {
-                include "../page/buku/buku.php";
+                include "../pageuser/buku/buku.php";
               }
             }
             // page transaksi: tambah
             elseif($page == "transaksi"){
               if (isset($_GET['aksi'])){
                 if ($aksi=="peminjaman"){
-                  include "../page/transaksi/peminjaman.php";
+                  include "../pageuser/transaksi/peminjaman.php";
                 }
                 elseif ($aksi=="pengembalian"){
-                  include "../page/transaksi/pengembalian.php";
+                  include "../pageuser/transaksi/pengembalian.php";
                 }
               }
               // else {
@@ -181,22 +182,22 @@
             elseif($page == "laporan"){
               if (isset($_GET['laporan'])){
                 if ($aksi=="laporan1"){
-                  include "../page/laporan1.php";
+                  include "../pageuser/laporan1.php";
                 }
               }
               else {
-                include "../page/laporan.php";
+                include "../pageuser/laporan.php";
               }
             }
             // page pengaturan:
             elseif($page == "pengaturan"){
               if (isset($_GET['pengaturan'])){
                 if ($aksi=="pengaturan"){
-                  include "../page/pengaturan1.php";
+                  include "../pageuser/pengaturan1.php";
                 }
               }
               else {
-                include "../page/pengaturan.php";
+                include "../pageuser/pengaturan.php";
               }
             }
           ?>

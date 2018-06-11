@@ -1,4 +1,4 @@
-<a href="?page=anggota&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Anggota</a>
+<a href="?pageadmin=anggota&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Anggota</a>
 <div class="row">
   <div class="col-md-12">
       <!-- Table data anggota -->
@@ -45,8 +45,8 @@
                           <td><?php echo $jk;?></td>
                           <td><?php echo $data['tingkat'];?></td>
                           <td>
-                            <a href="?page=anggota&aksi=edit&id=<?php echo $data['nis'];?>" class="btn btn-info">Edit</a>
-                            <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a>
+                            <a href="?pageadmin=anggota&aksi=edit&id=<?php echo $data['nis'];?>" class="btn btn-info">Edit</a>
+                            <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?pageadmin=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a>
                           </td>
                         </tr>
 
