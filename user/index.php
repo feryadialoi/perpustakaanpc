@@ -212,21 +212,14 @@
   function toggleNav() {
     var x = document.getElementById("mySidenav");
     var y = document.getElementById("main");
-    // var z = document.getElementById('logoutButton');
-    if (x.style.width === "0px" || y.style.marginLeft === "0px") {
-      // sidenav open
-      // x.style.width = "250px";
-      x.style.marginLeft = "0px";
-      x.style.marginRight = "250px";
-      y.style.marginLeft = "250px";
-      // z.style.marginRight = "266px";
-    } else{
+    if (y.style.marginLeft === "0px") {
       // sidenav close
-      // x.style.width = "0px";
+      x.style.marginLeft = "0px";
+      y.style.marginLeft = "250px";
+    } else {
+      // sidenav open
       x.style.marginLeft = "-250px";
-      x.style.marginRight = "0px";
       y.style.marginLeft = "0px";
-      // z.style.marginRight = "16px";
     }
   }
   </script>
