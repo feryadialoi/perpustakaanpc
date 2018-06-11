@@ -1,7 +1,7 @@
 <!-- <div class="float-tombol">
   <a class="btn btn-primary" href="?page=buku">Kembali</a>
 </div> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?pageadmin=buku">Kembali</a>
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku">Kembali</a>
 
 <div class="panel panel-default">
 <div class="panel-heading">
@@ -118,7 +118,7 @@
      <script type="text/javascript">
      alert("Data Berhasil Disimpan!")
      // lempar ke buku.php
-     window.location.href="?pageadmin=buku";
+     window.location.href="?page=buku";
      </script>
      <?php
    }

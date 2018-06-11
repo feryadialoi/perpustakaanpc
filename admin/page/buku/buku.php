@@ -1,4 +1,4 @@
-<a href="?pageadmin=buku&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Buku</a>
+<a href="?page=buku&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Buku</a>
 <div class="row">
   <div class="col-md-12">
     <!-- Table data buku -->
@@ -8,7 +8,7 @@
         </div>
         <div class="panel-body">
           <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <table class="table table-striped table-bordered table-hover" id="dataTables-x">
               <thead>
                 <tr>
                   <th>No</th>
@@ -35,8 +35,8 @@
                     <td><?php echo $data['isbn'];?></td>
                     <td><?php echo $data['jumlah_buku'];?></td>
                     <td>
-                      <a href="?pageadmin=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info">Edit</a>
-                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?pageadmin=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a>
+                      <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info">Edit</a>
+                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a>
                     </td>
                   </tr>
 

@@ -1,7 +1,7 @@
 <!-- <div class="float-tombol">
   <a class="btn btn-primary" href="?page=buku">Kembali</a>
 </div> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?pageadmin=buku">Kembali</a>
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku">Kembali</a>
 <?php $id= $_GET['id'];
 $sql = $koneksi->query("select * from tb_buku where id='$id'");
 
@@ -116,7 +116,7 @@ $lokasi = $tampil['lokasi'];
      <script type="text/javascript">
      alert("Perubahan Data Berhasil Disimpan!")
      // lempar ke buku.php
-     window.location.href="?pageadmin=buku";
+     window.location.href="?page=buku";
      </script>
      <?php
    }

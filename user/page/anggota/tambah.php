@@ -1,7 +1,7 @@
 <!-- <div class="float-tombol">
   <a class="btn btn-primary" href="?page=anggota">Kembali</a>
 </div> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?pageadmin=anggota">Kembali</a>
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
 <div class="panel panel-default">
 <div class="panel-heading">
   Tambah Data Anggota
@@ -75,7 +75,7 @@
     $cek = mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM tb_anggota WHERE nis='$nis'"));
    if ($cek > 0){
    echo "<script>window.alert('NIS ini sudah terdaftar!')
-   window.location='?pageadmin=anggota&aksi=tambah'</script>";
+   window.location='?page=anggota&aksi=tambah'</script>";
  }
     else{
       //koneksi ke db n save data yg sudah di cek 'note kevin'
@@ -88,7 +88,7 @@
      <script type="text/javascript">
      alert("Data Berhasil Disimpan!")
      // lempar ke anggota.php
-     window.location.href="?pageadmin=anggota";
+     window.location.href="?page=anggota";
      </script>
 
      <?php

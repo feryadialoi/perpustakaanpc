@@ -1,7 +1,7 @@
 <!-- <div class="float-tombol">
   <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
 </div> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?pageadmin=anggota">Kembali</a>
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
 <?php
 
 $nis= $_GET['id'];
