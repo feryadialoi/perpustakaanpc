@@ -12,8 +12,6 @@
 ?>
 <!-- php code untuk session login mengecek status login end-->
 
-
-
 <!-- php code untuk session login mengecek status login end-->
 <!DOCTYPE html>
 <html>
@@ -169,14 +167,14 @@
             // page transaksi: tambah
             elseif($page == "transaksi"){
               if (isset($_GET['aksi'])){
-                if ($aksi=="peminjaman"){
-                  include "./page/transaksi/peminjaman.php";
-                }
-                elseif ($aksi=="pengembalian"){
-                  include "./page/transaksi/pengembalian.php";
-                }
-                elseif ($aksi=="tambah"){
+                if ($aksi=="tambah"){
                   include "./page/transaksi/tambah.php";
+                }
+                elseif ($aksi=="kembali"){
+                  include "./page/transaksi/kembali.php";
+                }
+                elseif ($aksi=="perpanjang"){
+                  include "./page/transaksi/perpanjang.php";
                 }
               }
               else {
@@ -205,9 +203,11 @@
                 include "./page/pengaturan.php";
               }
             }
+            else {
+              include "./page/dashboard.php";
+            }
           ?>
         </div>
-
       </div>
   </div>
   <!-- main end -->
@@ -230,7 +230,6 @@
 
 <!-- modal start -->
 <div id="modallogout" class="modal">
-
   <div class="modal-content animate" action="/action_page.php">
     <div class="head">
       <span onclick="document.getElementById('modallogout').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -255,27 +254,12 @@
 </div>
 <!-- modal end -->
 
-<?php
-  include '../koneksi.php';
-  mysqli_select_db($conn,'perpustakaan');
-  $res = mysqli_query($conn,"SELECT * FROM tb_buku");
-  while ($row=mysqli_fetch_array($res)) {
-    // code...
-    // echo $row["id"]." ".$roe["name"];
-    // echo "<br>";
-  }
-
-
-  $res1 = mysqli_query($conn,"SELECT * FROM tb_buku");
-  $cou = mysqli_num_rows($res);
-  // echo $cou;
-?>
-
 <script src="../assets/js/jquery/jquery-331.js"></script>
 <script src="../assets/js/jquery/jquery-320.min.js"></script>
 <script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/jquery-1.10.2.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
-
+<script src="../assets/js/jquery.metisMenu.js"></script>
 
 <script src="../assets/js/dataTables/jquery.dataTables.js"></script>
 <script src="../assets/js/dataTables/dataTables.bootstrap.js"></script>
@@ -284,16 +268,6 @@
             $('#dataTables-example').dataTable();
         });
 </script>
-
-<script>
-  function stopRKey(evt) {
-    var evt = (evt) ? evt : ((event) ? event : null);
-    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
-    if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
-  }
-  document.onkeypress = stopRKey;
-</script>
-
 <!-- CUSTOM SCRIPTS -->
 <script src="../assets/js/custom.js"></script>
 </body>

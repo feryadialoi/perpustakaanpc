@@ -7,7 +7,7 @@
                Data Anggota
           </div>
           <div class="panel-body">
-              <div class="table-responsive">
+              <div class="table-responsive" id="container-table-anggota">
                   <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                       <thead>
                           <tr>
@@ -26,15 +26,13 @@
 
                         <?php
                         $no = 1;
-                        $sql = $koneksi -> query("select*from tb_anggota");
+                        // $query = "SELECT * FROM tb_anggota WHERE nis LIKE '%o%' OR nama LIKE '%o%' OR tmp_lahir LIKE '%o%' OR tgl_lahir LIKE '%o%' OR jk LIKE '%o%' OR tingkat LIKE '%o%'";
+                        $query = "SELECT * FROM tb_anggota";
+                        // $sql = $koneksi -> query("select*from tb_anggota");
+                        $sql = $koneksi -> query($query);
                         while ($data= $sql-> fetch_assoc()){
-
-                        $jk = ($data['jk']=="l")?"Laki - Laki":"Perempuan";
-
-
-
+                        $jk = ($data['jk']=='l')?"Laki - Laki":"Perempuan";
                         ?>
-
 
                         <tr>
                           <td><?php echo $no++; ?></td>
@@ -46,11 +44,9 @@
                           <td><?php echo $data['tingkat'];?></td>
                           <td>
                             <a href="?page=anggota&aksi=edit&id=<?php echo $data['nis'];?>" class="btn btn-info">Edit</a>
-                            <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a> -->
+                            <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a> -->
                           </td>
                         </tr>
-
-
                       <?php } ?>
                       </tbody>
                     </table>
@@ -59,3 +55,4 @@
     </div>
   </div>
 </div>
+<!-- <script src="../assets/js/ajax/ajaxAnggota.js"></script> -->

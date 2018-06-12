@@ -6,8 +6,9 @@
         <div class="panel-heading">
              Data Buku
         </div>
+
         <div class="panel-body">
-          <div class="table-responsive">
+          <div class="table-responsive" id="container-table-buku">
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
               <thead>
                 <tr>
@@ -24,7 +25,7 @@
               <tbody>
                   <?php
                     $no = 1;
-                    $sql = $koneksi -> query("select*from tb_buku limit 10");
+                    $sql = $koneksi -> query("select*from tb_buku");
                     while ($data= $sql-> fetch_assoc()){
                   ?>
                   <tr>
@@ -49,3 +50,4 @@
     </div>
   </div>
 </div>
+<!-- <script src="../assets/js/ajax/ajaxBuku.js"></script> -->

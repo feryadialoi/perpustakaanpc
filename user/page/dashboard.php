@@ -1,6 +1,34 @@
+<!-- tagline -->
+  <p class="dashboard-text">Selamat Datang!</p>
+  <p class="dashboard-text2">Di Halaman Pengelolaan Aplikasi Perpustakaan Pelita Cemerlang</p>
+<!-- menu dashboard start-->
+<hr>
+<div class="row">
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+      <a class="dash-item col-sm-12 col-xs-12" href="index.php"><i class="material-icons">dashboard</i> Dashboard</a>
+  </div>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+      <a class="dash-item col-sm-12 col-xs-12" href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a>
+  </div>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+      <a class="dash-item col-sm-12 col-xs-12" href="?page=buku"><i class="material-icons">book</i> Buku</a>
+  </div>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+      <a class="dash-item col-sm-12 col-xs-12" href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
+  </div>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+      <a class="dash-item col-sm-12 col-xs-12" href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
+  </div>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+      <a class="dash-item col-sm-12 col-xs-12" href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a>
+  </div>
+</div>
+<hr>
+<!-- menu dashboard end -->
+
 <!-- btn tambah buku baru -->
 <?php include '../function.php'; ?>
-<a href="?page=transaksi&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Transaksi</a>
+<!-- <a href="?page=transaksi&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Transaksi</a> -->
 
 <div class="row">
 <div class="col-md-12">
@@ -29,7 +57,7 @@
 
             <?php
             $no = 1;
-            $sql = $koneksi -> query("SELECT * FROM tb_transaksi WHERE status='pinjam'");
+            $sql = $koneksi -> query("SELECT * FROM tb_transaksi");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>

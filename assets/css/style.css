@@ -390,3 +390,42 @@ select.form-control-custom{
 a .page-link{
   color: #000;
 }
+.dashboard-text {
+  font-size: 3vw;
+  text-align:center;
+  color: #6e6e6e;
+}
+.dashboard-text2 {
+  font-size: 3vw;
+  text-align:center;
+  color: #6e6e6e;
+}
+
+/* dashboard */
+@media screen and (min-width: 1200px) {
+  .dashboard-text {
+     font-size: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dashboard-text2 {
+     font-size: 30px;
+  }
+}
+.dash-item{
+  background: #2455f4;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  color: #fff;
+}
+.content-dash-item{
+  padding: 16px;
+}
+.dash-item:hover{
+  background: #1f41b5;
+  color: #fff;
+  text-decoration: none;
+}
