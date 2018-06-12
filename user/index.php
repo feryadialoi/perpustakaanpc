@@ -239,6 +239,8 @@
       <h2>Logout</h2>
       <p>
         Apa anda yakin untuk keluar?
+        <br>
+        <br>
       </p>
     </div>
 
