@@ -8,8 +8,26 @@
       <div class="panel-heading">
         Data Buku
       </div>
+      <!-- <div class="form-page form-group">
+        <strong>
+          <label for="select-record" class="col-sm-1 col-form-label">Show record:</label>
+          <div class="col-sm-2">
+            <select style="height:34px;" class="form-control" id="select-record" placeholder="Email">
+              <option value="">10</option>
+              <option value="">25</option>
+              <option value="">50</option>
+              <option value="">100</option>
+            </select>
+          </div>
+          <div class="col-sm-6"></div>
+          <label for="search-record" class="col-sm-1 col-form-label">Search :</label>
+          <div class="col-sm-2">
+            <input class="form-control" id="transaksiRecord">
+          </div>
+        </strong>
+      </div> -->
       <div class="panel-body">
-        <div class="table-responsive">
+        <div class="table-responsive" id="container-table-transaksi">
           <table class="table table-striped table-bordered table-hover" id="dataTables-example">
             <thead>
               <tr>
@@ -65,17 +83,50 @@
                   </td>
                   <td><?php echo $data['status'];?></td>
                   <td>
-                    <!-- <a href="?page=anggota&aksi=edit&id=<?php echo $data['nim'];?>" class="btn btn-info">Edit</a>
-                    <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a> -->
+                    <a href="?page=anggota&aksi=edit&id=<?php echo $data['nim'];?>" class="btn btn-info">Edit</a>
+                    <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=transaksi&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a>
                   </td>
                 </tr>
 
 
               <?php } ?>
             </tbody>
+          </table>
           </div>
         </div>
+
+
+        <!-- pagination start-->
+        <!-- <?php
+          include '../koneksi.php';
+          mysqli_select_db($conn,'perpustakaan');
+          $res = mysqli_query($conn,"SELECT * FROM tb_transaksi");
+          // while ($row=mysqli_fetch_array($res)) {
+            // code...
+            // echo $row["id"]." ".$roe["name"];
+            // echo "<br>";
+          // }
+
+          $cou = mysqli_num_rows($res);
+          echo "jumlah record : ".$cou."<br>";
+          $cou = ceil($cou / 3);
+          echo "jumlah halaman : ".$cou."<br>";
+
+          echo '<nav style="text-align:center;">';
+          echo '<ul class="pagination">';
+            echo '<li class="page-item"><a class="page-link">prev</a></li>';
+            for ($i=1; $i <= $cou; $i++) {
+              print '<li class="page-item"><a class="page-link">'.$i.'</a></li>';
+            }
+            echo '<li class="page-item"><a class="page-link">next</a></li>';
+          echo '</ul>';
+          echo "</nav>";
+        ?> -->
+        <!-- pagination end -->
+
+
 
     </div>
   </div>
 </div>
+<script src="../assets/js/ajax/ajaxTransaksi.js"></script>

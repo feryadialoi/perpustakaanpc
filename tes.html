@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#select1").change(function(){
+        var nilai = $(this).val();
+        $("p").html("nilai yang dipilih : " + nilai);
+        // alert("The text has been changed.");
+    });
+});
+</script>
+</head>
+<body>
+
+<!-- <input type="text"> -->
+<select class="" name="select1" id="select1">
+  <option value="10">10</option>
+  <option value="25">25</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+</select>
+
+<p>Write something in the input field, and then press enter or click outside the field.</p>
+
+</body>
+</html>

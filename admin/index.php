@@ -28,8 +28,8 @@
 
   <!-- TABLE STYLES-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="shortcut icon" href="../assets/img/logo.png">
   <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
+  <link rel="shortcut icon" href="../assets/img/logo.png">
 </head>
 <body>
   <!-- topbar menu start -->
@@ -276,14 +276,25 @@
 <script src="../assets/js/bootstrap.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
 
-<script src="../assets/js/dataTables/jquery.dataTables.js"></script>
-<!-- <script src="../assets/js/dataTables/dataTables.bootstrap.js"></script> -->
-<script>
-          $(document).ready(function () {
-              $('#dataTables-x').dataTable();
-          });
-</script>
-<!-- <script src="../assets/js/custom.js"></script> -->
 
+<script src="../assets/js/dataTables/jquery.dataTables.js"></script>
+<script src="../assets/js/dataTables/dataTables.bootstrap.js"></script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+</script>
+
+<script>
+  function stopRKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+  }
+  document.onkeypress = stopRKey;
+</script>
+
+<!-- CUSTOM SCRIPTS -->
+<script src="../assets/js/custom.js"></script>
 </body>
 </html>

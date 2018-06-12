@@ -383,3 +383,10 @@ div.logout-btn2 {
 select.form-control-custom{
   height: 34px;
 }
+.form-page {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+a .page-link{
+  color: #000;
+}

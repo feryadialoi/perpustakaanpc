@@ -29,7 +29,7 @@
                         $sql = $koneksi -> query("select*from tb_anggota");
                         while ($data= $sql-> fetch_assoc()){
 
-                        $jk = ($data['jk']==l)?"Laki - Laki":"Perempuan";
+                        $jk = ($data['jk']=="l")?"Laki - Laki":"Perempuan";
 
 
 

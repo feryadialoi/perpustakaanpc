@@ -24,10 +24,11 @@
   <link rel="stylesheet" href="../assets/css/bootstrap.ba.css">
   <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- <link rel="stylesheet" href="../assets/css/custom.css"> -->
 
   <!-- TABLE STYLES-->
-  <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
   <link rel="shortcut icon" href="../assets/img/logo.png">
 </head>
 <body>
@@ -272,27 +273,29 @@
   // echo $cou;
 ?>
 
-<script type="text/javascript" src="../assets/js/jquery.js"></script>
-<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/jquery/jquery-331.js"></script>
+<script src="../assets/js/jquery/jquery-320.min.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+
 
 <script src="../assets/js/dataTables/jquery.dataTables.js"></script>
 <script src="../assets/js/dataTables/dataTables.bootstrap.js"></script>
 <script>
-          $(document).ready(function () {
-              $('#dataTables-example').dataTable();
-          });
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
 </script>
-<script type="text/javascript">
 
-    function stopRKey(evt) {
-      var evt = (evt) ? evt : ((event) ? event : null);
-      var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
-      if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
-    }
-
-    document.onkeypress = stopRKey;
-
+<script>
+  function stopRKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+  }
+  document.onkeypress = stopRKey;
 </script>
+
 <!-- CUSTOM SCRIPTS -->
 <script src="../assets/js/custom.js"></script>
 </body>
