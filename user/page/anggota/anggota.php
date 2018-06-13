@@ -18,7 +18,7 @@
                               <th>Tanggal Lahir</th>
                               <th>Jenis Kelamin</th>
                               <th>Tingkat</th>
-                              <th>Aksi </th>
+                              <!-- <th>Aksi </th> -->
                           </tr>
                       </thead>
                       <!-- fetching item dari database ke form -->
@@ -42,10 +42,10 @@
                           <td><?php echo $data['tgl_lahir'];?></td>
                           <td><?php echo $jk;?></td>
                           <td><?php echo $data['tingkat'];?></td>
-                          <td>
-                            <a href="?page=anggota&aksi=edit&id=<?php echo $data['nis'];?>" class="btn btn-info">Edit</a>
+                          <!-- <td> -->
+                            <!-- <a href="?page=anggota&aksi=edit&id=<?php echo $data['nis'];?>" class="btn btn-info">Edit</a> -->
                             <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a> -->
-                          </td>
+                          <!-- </td> -->
                         </tr>
                       <?php } ?>
                       </tbody>

@@ -18,7 +18,7 @@
                   <th>Penerbit</th>
                   <th>ISBN(Kode Buku)</th>
                   <th>Jumlah Buku</th>
-                  <th>Aksi </th>
+                  <!-- <th>Aksi </th> -->
                 </tr>
               </thead>
                 <!-- fetching item dari database ke form -->
@@ -35,10 +35,10 @@
                     <td><?php echo $data['penerbit'];?></td>
                     <td><?php echo $data['isbn'];?></td>
                     <td><?php echo $data['jumlah_buku'];?></td>
-                    <td>
-                      <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info">Edit</a>
+                    <!-- <td> -->
+                      <!-- <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info">Edit</a> -->
                       <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a> -->
-                    </td>
+                    <!-- </td> -->
                   </tr>
 
 
