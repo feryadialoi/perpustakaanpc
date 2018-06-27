@@ -4,37 +4,71 @@
 <!-- menu dashboard start-->
 <hr>
 <div class="row">
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-      <a class="dash-item col-sm-12 col-xs-12" href="index.php"><i class="material-icons">dashboard</i> Dashboard</a>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4">
+    <div class="dash-item col-sm-12 col-xs-12">
+      <p>Jumlah Anggota :</p>
+      <p>
+        <?php
+          $sql = "SELECT * FROM tb_anggota";
+          $result = mysqli_query($conn,$sql);
+          $rows = mysqli_num_rows($result);
+          echo "<strong>".$rows." orang</strong>";
+        ?>
+      </p>
+      <hr>
+    </div>
+    <!-- <a class="dash-item col-sm-12 col-xs-12" href="index.php"><i class="material-icons">dashboard</i> Dashboard</a> -->
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-      <a class="dash-item col-sm-12 col-xs-12" href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4">
+    <div class="dash-item col-sm-12 col-xs-12">
+      <p>Jumlah Judul Buku :</p>
+      <p>
+        <?php
+        $sql = "SELECT judul FROM tb_buku";
+          $result = mysqli_query($conn,$sql);
+          $rows = mysqli_num_rows($result);
+          echo "<strong>".$rows." buku</strong>";
+        ?>
+      </p>
+      <hr>
+    </div>
+    <!-- <a class="dash-item col-sm-12 col-xs-12" href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a> -->
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-      <a class="dash-item col-sm-12 col-xs-12" href="?page=buku"><i class="material-icons">book</i> Buku</a>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4">
+    <div class="dash-item col-sm-12 col-xs-12">
+      <p>Jumlah Pengunjung 30 Hari Terakhir :</p>
+      <p>
+        <?php
+          $sql = "SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
+          $result = mysqli_query($conn,$sql);
+          $rows = mysqli_num_rows($result);
+          echo "<strong>".$rows." pengunjung</strong>";
+        ?>
+      </p>
+      <hr>
+    </div>
+    <!-- <a class="dash-item col-sm-12 col-xs-12" href="?page=buku"><i class="material-icons">book</i> Buku</a> -->
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-      <a class="dash-item col-sm-12 col-xs-12" href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
-  </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-      <a class="dash-item col-sm-12 col-xs-12" href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
-  </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-      <a class="dash-item col-sm-12 col-xs-12" href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a>
-  </div>
+  <!-- <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+    <a class="dash-item col-sm-12 col-xs-12" href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
+  </div> -->
+  <!-- <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+    <a class="dash-item col-sm-12 col-xs-12" href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
+  </div> -->
+  <!-- <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
+    <a class="dash-item col-sm-12 col-xs-12" href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a>
+  </div> -->
 </div>
 <hr>
 <!-- menu dashboard end -->
 
-<!-- btn tambah buku baru -->
 <?php include '../function.php'; ?>
-<!-- <a href="?page=transaksi&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Transaksi</a> -->
 
 <div class="row">
 <div class="col-md-12">
 <div class="panel panel-default">
   <div class="panel-heading">
-     Data Buku
+     Data Peminjaman Buku 30 Hari Terakhir
    </div>
    <div class="panel-body">
     <div class="table-responsive">
@@ -57,7 +91,7 @@
 
             <?php
             $no = 1;
-            $sql = $koneksi -> query("SELECT * FROM tb_transaksi");
+            $sql = $koneksi -> query("SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>
