@@ -1,6 +1,6 @@
 <!-- tagline -->
   <p class="dashboard-text">Selamat Datang!</p>
-  <p class="dashboard-text2">Di Halaman Pengelolaan Aplikasi Perpustakaan Pelita Cemerlang</p>
+  <p class="dashboard-text2">Di Halaman Pengelolaan Aplikasi Perpustakaan Sekolah Pelita Cemerlang</p>
 <!-- menu dashboard start-->
 <hr>
 <div class="row">
