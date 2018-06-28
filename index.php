@@ -28,10 +28,10 @@
       <center><img src="./assets/img/logo.png" alt="logo" width="150px"></center>
       <form role="form" action="login.php" method="post" id="form" onsubmit="return validasi()">
         <div class="form-group input-group">
-          <input id="username" class="form-control" type="text" name="username" placeholder="Username">
+          <input id="username" class="form-control" type="text" name="username" placeholder="Username" required>
         </div>
         <div class="form-group input-group">
-          <input id="password" class="form-control" type="password" name="password" placeholder="Password">
+          <input id="password" class="form-control" type="password" name="password" placeholder="Password" required>
         </div>
         <hr><!--  garis pembatas -->
         <div >
