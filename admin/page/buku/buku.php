@@ -1,4 +1,4 @@
-<a href="?page=buku&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Buku</a>
+<a href="?page=buku&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">add</i> Tambah Buku</a>
 <div class="row">
   <div class="col-md-12">
     <!-- Table data buku -->
@@ -25,7 +25,7 @@
               <tbody>
                   <?php
                     $no = 1;
-                    $sql = $koneksi -> query("select*from tb_buku");
+                    $sql = $koneksi -> query("SELECT * FROM tb_buku");
                     while ($data= $sql-> fetch_assoc()){
                   ?>
                   <tr>
@@ -36,8 +36,9 @@
                     <td><?php echo $data['isbn'];?></td>
                     <td><?php echo $data['jumlah_buku'];?></td>
                     <td>
-                      <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info">Edit</a>
-                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a>
+                      <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
+                      <button class="btn btn-danger" onclick="document.getElementById('modalHapusBuku').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button>
+                      <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php //echo $data['id'];?>" class="btn btn-danger">Delete</a> -->
                     </td>
                   </tr>
 
@@ -51,3 +52,35 @@
   </div>
 </div>
 <!-- <script src="../assets/js/ajax/ajaxBuku.js"></script> -->
+<div id="modalHapusBuku" class="modal">
+  <?php
+  $no = 1;
+  $query = "SELECT * FROM tb_buku";
+  $sql = $koneksi -> query($query);
+  $data= $sql-> fetch_assoc();
+
+  ?>
+  <div class="modal-content animate" action="/action_page.php">
+    <div class="head">
+      <span onclick="document.getElementById('modalHapusBuku').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+      <h2>Hapus Buku</h2>
+      <p>
+        Anda Yakin Ingin Menghapus Data Buku Berikut?
+        <br>
+        <br>
+      </p>
+    </div>
+
+    <div class="container-modal">
+      <!-- <div class="logout-btn"> -->
+      <div class="logout-btn2">
+
+        <a href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger modalawidth">Ya</a>
+        <button type="button" onclick="document.getElementById('modalHapusBuku').style.display='none'" class="btn btn-primary modalbtnwidth">Tidak</button>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>

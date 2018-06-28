@@ -1,11 +1,12 @@
 <!-- <div class="float-tombol">
   <a class="btn btn-primary" href="?page=buku">Kembali</a>
 </div> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku">Kembali</a>
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 
 <div class="panel panel-default">
 <div class="panel-heading">
   Tambah Data Buku
+</div>
   <script type=”text/javascript”>
 
   <script type="text/javascript">
@@ -23,7 +24,7 @@
                            <div class="row">
                                <div class="col-md-12">
 
-                                   <form method="POST">
+                                   <form id="formTambahBuku" method="POST">
                                        <div class="form-group">
                                            <label>Judul Buku</label>
                                            <input class="form-control" name="judul" required/>
@@ -86,12 +87,12 @@
 
                                          </div>
                                          <div>
-                                           <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                                           <!-- <input type="submit" name="simpan" value="Simpan" class="btn btn-primary"> -->
+                                           <button type="submit" name="simpan" form="formTambahBuku" value="submit" class="btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
                                          </div>
                                        </div>
                                      </form>
                               </div>
-</div>
 </div>
 </div>
 

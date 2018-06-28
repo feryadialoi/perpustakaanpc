@@ -1,6 +1,6 @@
 <!-- btn tambah buku baru -->
 <?php include '../function.php'; ?>
-<a href="?page=transaksi&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px">Tambah Transaksi</a>
+<a href="?page=transaksi&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">add</i> Tambah Transaksi</a>
 
 <div class="row">
 <div class="col-md-12">
@@ -58,8 +58,8 @@
               </td>
               <td><?php echo $data['status'];?></td>
               <td>
-                 <a href="?page=transaksi&aksi=perpanjang&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>&lambat=<?php echo $lambat; ?>&tgl_kembali=<?php echo $data['tgl_kembali']; ?>" class="btn btn-info">Perpanjang</a>
-                 <a href="?page=transaksi&aksi=kembali&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>" class="btn btn-info">Kembalikan</a>
+                 <a href="?page=transaksi&aksi=perpanjang&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>&lambat=<?php echo $lambat; ?>&tgl_kembali=<?php echo $data['tgl_kembali']; ?>" class="btn btn-info"><i class="material-icons md-18">next_week</i> Perpanjang</a>
+                 <a href="?page=transaksi&aksi=kembali&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>" class="btn btn-info"><i class="material-icons md-18">check</i> Kembalikan</a>
               </td>
           <?php } ?>
           </tr>

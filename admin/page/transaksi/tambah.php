@@ -1,20 +1,20 @@
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=transaksi">Kembali</a>
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=transaksi"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <div class="panel panel-default">
 <div class="panel-heading">
   Transaksi Peminjaman Buku
-  </div>
+</div>
   <!-- free for Edit
   editable -->
 <div class="panel-body">
   <!-- note : disable dgn readonly fungsinya berbeda kalo disable itu gk bisa masuk datanya. kalo readonly datanya masih bisa masuk  -->
                            <div class="row">
-                               <div class="col-md-12">
+                             <div class="col-md-12">
 
-                                   <form method="POST">
+                                   <form id="formTambahTransaksi" method="POST">
                                        <div class="form-group">
                                          <div class="form-group">
                                              <label>Nomor Induk Siswa</label>
-                                             <input class="form-control" name="nis" id="nis" />
+                                             <input class="form-control" name="nis" id="nis" required/>
                                          </div>
                                          <div class="form-group">
                                                 <label>Nama Siswa</label>
@@ -22,7 +22,7 @@
                                             </div>
                                        <div class="form-group">
                                            <label>Nomor Buku / ISBN</label>
-                                           <input class="form-control" name="isbn" id="isbn"/>
+                                           <input class="form-control" name="isbn" id="isbn" required/>
                                        </div>
                                        <div class="form-group">
                                            <label>Judul Buku</label>
@@ -30,17 +30,18 @@
                                        </div>
                                      <div class="form-group">
                                          <label>Tanggal Pinjam</label>
-                                         <input class="form-control" name="tgl_pinjam" type="date" id="tgl_pinjam" value="<?php echo $tgl_pinjam ?>" />
+                                         <input class="form-control" name="tgl_pinjam" type="date" id="tgl_pinjam" value="<?php echo $tgl_pinjam ?>" required/>
                                      </div>
                                      <div class="form-group">
                                          <label>Tanggal Kembali</label>
-                                         <input class="form-control" name="tgl_kembali" type="date" id="tgl_kembali" value="<?php echo $kembali ?>"/>
+                                         <input class="form-control" name="tgl_kembali" type="date" id="tgl_kembali" value="<?php echo $kembali ?>" required/>
                                      </div>
-
-                                           <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
-                                         </div>
-                                       </div>
-                                     </form>
+                                     <div class="form-group">
+                                       <!-- <input type="submit" name="simpan" value="Simpan" class="btn btn-primary"> -->
+                                       <button type="submit" name="simpan" form="formTambahTransaksi" value="submit" class="btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
+                                     </div>
+                                   </div>
+                               </form>
                               </div>
 </div>
 </div>

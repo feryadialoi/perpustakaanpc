@@ -1,7 +1,7 @@
 <!-- <div class="float-tombol">
   <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
 </div> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota">Kembali</a>
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <?php
 
 $nis= $_GET['id'];
@@ -21,7 +21,7 @@ $tingkat_A=$tampil['tingkat'];
                               <div class="row">
                                   <div class="col-md-12">
 
-                                      <form method="POST">
+                                      <form id="formEditAnggota" method="POST">
                                           <div class="form-group">
                                               <label>Nomor Induk Siswa</label>
                                               <input class="form-control" name="nis"value="<?php echo $tampil['nis'];  ?>"readonly/>
@@ -62,7 +62,8 @@ $tingkat_A=$tampil['tingkat'];
                                                  </select>
                                              </div>
                                             <div>
-                                              <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                                              <!-- <input type="submit" name="simpan" value="Simpan" class="btn btn-primary"> -->
+                                              <button type="submit" name="simpan" form="formEditAnggota" value="submit" class="btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
                                             </div>
                                           </div>
                                         </form>
