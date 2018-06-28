@@ -106,12 +106,11 @@ body {
     font-size: 14px;
     text-decoration:none;
 }
-
+.Aksi i{
+  transform: translateX(0%) translateY(10%);
+}
+.material-icons.md-18 { font-size: 18px; transform: translateX(0%) translateY(15%);}
 i{
-  /* padding-top: 10px; */
-  font-size: 30px;
-  /* top: 0%;
-  left: 50%; */
   transform: translateX(0%) translateY(25%);
 }
 /* Style the tab */
