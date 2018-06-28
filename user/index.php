@@ -132,10 +132,8 @@
     <a href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a>
     <a href="?page=buku"><i class="material-icons">book</i> Buku</a>
     <a href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
-    <!-- <a href="?page=peminjaman"><i class="material-icons">unarchive</i> Peminjaman</a>
-    <a href="?page=pengembalian"><i class="material-icons">archive</i> Pengembalian</a> -->
     <a href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
-    <a href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a>
+    <!-- <a href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a> -->
     <!-- menu sidenav end -->
   </div>
   <!-- sidenav end -->
@@ -219,16 +217,16 @@
               }
             }
             // page pengaturan:
-            elseif($page == "pengaturan"){
-              if (isset($_GET['pengaturan'])){
-                if ($aksi=="pengaturan"){
-                  include "./page/pengaturan1.php";
-                }
-              }
-              else {
-                include "./page/pengaturan.php";
-              }
-            }
+            // elseif($page == "pengaturan"){
+            //   if (isset($_GET['pengaturan'])){
+            //     if ($aksi=="pengaturan"){
+            //       include "./page/pengaturan1.php";
+            //     }
+            //   }
+            //   else {
+            //     include "./page/pengaturan.php";
+            //   }
+            // }
             else {
               include "./page/dashboard.php";
             }
