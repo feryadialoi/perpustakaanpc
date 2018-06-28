@@ -282,6 +282,71 @@
 </div>
 <!-- modal end -->
 
+<!-- script anti enter start -->
+<script type="text/javascript">
+  function stopRKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+  }
+  document.onkeypress = stopRKey;
+</script>
+<!-- script anri enter end -->
+
+<!-- generator transaksi bag nis dan nama murid start-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+  $(function() {
+    $("#nis").change(function(){
+      var nis = $("#nis").val();
+
+      $.ajax({
+        url: '../prosesNis.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+          'nis': nis
+        },
+        success: function (siswa) {
+          $("#nama").val(siswa['nama']);
+        }
+      });
+    });
+
+    $("form").submit(function(){
+
+    });
+  });
+</script>
+<!-- generator transaksi bag nis dan nama murid end-->
+
+<!-- generator bag isbn dan nama buku start-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $("#isbn").change(function(){
+        var isbn = $("#isbn").val();
+
+        $.ajax({
+          url: '../prosesIsbn.php',
+          type: 'POST',
+          dataType: 'json',
+          data: {
+            'isbn': isbn
+          },
+          success: function (siswa) {
+            $("#judul").val(siswa['judul']);
+          }
+        });
+      });
+
+      $("form").submit(function(){
+
+      });
+    });
+  </script>
+<!-- generator bag isbn dan nama buku end-->
+
 <script src="../assets/js/jquery/jquery-331.js"></script>
 <script src="../assets/js/jquery/jquery-320.min.js"></script>
 <script src="../assets/js/bootstrap.js"></script>
