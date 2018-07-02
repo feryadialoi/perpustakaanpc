@@ -8,7 +8,6 @@
   if($_SESSION['status'] !="loginAdmin") {
     header("location:../index.php");
   }
-  $koneksi = new mysqli ("localhost","root","","perpustakaan");
 ?>
 <!-- php code untuk session login mengecek status login end-->
 
@@ -29,7 +28,7 @@
   <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
   <link rel="shortcut icon" href="../assets/img/logo.png">
 </head>
-<body onload="setInterval('displayServerTime()', 1000);">
+<body id="index" onload="setInterval('displayServerTime()', 1000);">
   <!-- topbar menu start -->
   <div class="top-bar">
     <div class="hamburger">
@@ -207,10 +206,16 @@
             }
             // page laporan:
             elseif($page == "laporan"){
-              if (isset($_GET['laporan'])){
-                if ($aksi=="laporan1"){
-                  include "./page/laporan1.php";
-                }
+              if (isset($_GET['aksi'])){
+                // if ($aksi=="semua"){
+                //   include "../cetaksemua.php";
+                // }
+                // if ($aksi=="pinjam"){
+                //   include "./page/laporan/cetakpinjam.php";
+                // }
+                // if ($aksi=="kembali"){
+                //   include "./page/laporan/cetakkembali.php";
+                // }
               }
               else {
                 include "./page/laporan.php";
@@ -357,6 +362,21 @@
 <script>
         $(document).ready(function () {
             $('#dataTables-example').dataTable();
+        });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-pinjam').dataTable();
+        });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-kembali').dataTable();
+        });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-total').dataTable();
         });
 </script>
 <!-- CUSTOM SCRIPTS -->

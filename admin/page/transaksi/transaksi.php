@@ -29,7 +29,7 @@
 
             <?php
             $no = 1;
-            $sql = $koneksi -> query("SELECT * FROM tb_transaksi WHERE status='pinjam'");
+            $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status='pinjam'");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>
@@ -52,7 +52,7 @@
                 if($lambat>0){
                   echo "<font color='red'>$lambat hari<br>(Rp $denda_a)</font>";
                 }else{
-                  echo $lambat . "Hari";
+                  echo $lambat . " Hari";
                 }
                 ?>
               </td>

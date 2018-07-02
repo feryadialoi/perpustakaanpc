@@ -29,7 +29,7 @@
 
             <?php
             $no = 1;
-            $sql = $koneksi -> query("SELECT * FROM tb_transaksi WHERE status='pinjam'");
+            $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status='pinjam'");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>

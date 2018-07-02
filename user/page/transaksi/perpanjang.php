@@ -15,7 +15,7 @@
 
     $tgl2 = date('Y-m-d',strtotime('+7 day',strtotime($tgl_kembali)));
     //pakai ini lebih mudah dan ringkas dari cara yg sebelumnya yg penuh dengan bug dan hasil belum tentu akurat =_= (line 17 - line 20)
-       $sql = $koneksi->query("update tb_transaksi set tgl_kembali='$tgl2' where id='$id'");
+       $sql = $conn->query("update tb_transaksi set tgl_kembali='$tgl2' where id='$id'");
               if($sql){
                 ?>
                   <script type="text/javascript">

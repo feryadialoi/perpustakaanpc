@@ -112,7 +112,7 @@
  $tgl_Input = $_POST['tgl_Input'];
  $simpan = $_POST['simpan'];
  if($simpan){
-   $sql = $koneksi->query("insert into tb_buku (judul,pengarang,penerbit,tahun_terbit,isbn,jumlah_buku,lokasi,tgl_Input)
+   $sql = $conn->query("insert into tb_buku (judul,pengarang,penerbit,tahun_terbit,isbn,jumlah_buku,lokasi,tgl_Input)
    values('$judul','$pengarang','$penerbit','$tahun_Terbit','$isbn','$jumlah_buku','$lokasi','$tgl_Input')");
    if($sql){
  ?>

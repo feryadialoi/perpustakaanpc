@@ -57,7 +57,7 @@ if(isset($_POST['simpan'])){
   $nis = $_POST['nis'];
   $isbn = $_POST['isbn'];
 
-$sql = $koneksi-> query("select * from tb_buku where judul = '$judul'");
+$sql = $conn-> query("select * from tb_buku where judul = '$judul'");
 while($data = $sql->fetch_assoc()){
 $sisa = $data['jumlah_buku'];
   if($sisa == 0){
@@ -68,9 +68,9 @@ $sisa = $data['jumlah_buku'];
           </script>
 <?php
 }else{
-  $sql1 = $koneksi->query("insert into tb_transaksi(judul, nis, nama, tgl_pinjam, tgl_kembali, status)values('$judul', '$nis', '$nama', '$tgl_pinjam', '$tgl_kembali', 'pinjam')"); //sudah fix
+  $sql1 = $conn->query("insert into tb_transaksi(judul, nis, nama, tgl_pinjam, tgl_kembali, status)values('$judul', '$nis', '$nama', '$tgl_pinjam', '$tgl_kembali', 'pinjam')"); //sudah fix
 
-  $sql2 = $koneksi->query("update tb_buku set jumlah_buku=(jumlah_buku-1)where judul = '$judul'"); //sudah bner ini wae
+  $sql2 = $conn->query("update tb_buku set jumlah_buku=(jumlah_buku-1)where judul = '$judul'"); //sudah bner ini wae
 
   ?>
             <script type="text/javascript">

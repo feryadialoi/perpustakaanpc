@@ -5,7 +5,7 @@
 <?php
 
 $nis= $_GET['id'];
-$sql = $koneksi->query("select * from tb_anggota where nis='$nis'");
+$sql = $conn->query("select * from tb_anggota where nis='$nis'");
 
 $tampil = $sql->fetch_assoc();
 $jk_A=$tampil['jk'];
@@ -84,7 +84,7 @@ $tingkat_A=$tampil['tingkat'];
   $tingkat = $_POST['tingkat'];
   $simpan = $_POST['simpan'];
    if($simpan){
-     $sql = $koneksi->query("update tb_anggota set nis='$nis',nama='$nama',tmp_lahir='$tmp_lahir',tgl_lahir='$tgl_lahir',jk='$jk',tingkat='$tingkat' where nis='$nis'");
+     $sql = $conn->query("update tb_anggota set nis='$nis',nama='$nama',tmp_lahir='$tmp_lahir',tgl_lahir='$tgl_lahir',jk='$jk',tingkat='$tingkat' where nis='$nis'");
 
     if($sql){
   ?>

@@ -8,7 +8,6 @@
   if($_SESSION['status'] !="loginUser") {
     header("location:../index.php");
   }
-  $koneksi = new mysqli ("localhost","root","","perpustakaan");
 ?>
 <!-- php code untuk session login mengecek status login end-->
 
@@ -207,10 +206,10 @@
             }
             // page laporan:
             elseif($page == "laporan"){
-              if (isset($_GET['laporan'])){
-                if ($aksi=="laporan1"){
-                  include "./page/laporan1.php";
-                }
+              if (isset($_GET['aksi'])){
+                // if ($aksi=="laporan1"){
+                //   include "./page/laporan1.php";
+                // }
               }
               else {
                 include "./page/laporan.php";
@@ -357,6 +356,21 @@
 <script>
         $(document).ready(function () {
             $('#dataTables-example').dataTable();
+        });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-pinjam').dataTable();
+        });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-kembali').dataTable();
+        });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-total').dataTable();
         });
 </script>
 <!-- CUSTOM SCRIPTS -->

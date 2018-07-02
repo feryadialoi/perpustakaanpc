@@ -91,7 +91,7 @@
 
             <?php
             $no = 1;
-            $sql = $koneksi -> query("SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+            $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>

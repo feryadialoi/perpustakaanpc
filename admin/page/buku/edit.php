@@ -3,7 +3,7 @@
 </div> -->
 <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <?php $id= $_GET['id'];
-$sql = $koneksi->query("select * from tb_buku where id='$id'");
+$sql = $conn->query("select * from tb_buku where id='$id'");
 
 $tampil = $sql->fetch_assoc();
 
@@ -110,7 +110,7 @@ $lokasi = $tampil['lokasi'];
  $tgl_Input = $_POST['tgl_Input'];
  $simpan = $_POST['simpan'];
  if($simpan){
-   $sql = $koneksi->query("update tb_buku set judul='$judul', pengarang='$pengarang', penerbit='$penerbit', tahun_terbit='$tahun',
+   $sql = $conn->query("update tb_buku set judul='$judul', pengarang='$pengarang', penerbit='$penerbit', tahun_terbit='$tahun',
                           isbn='$isbn', jumlah_buku='$jumlah_buku', lokasi='$lokasi', tgl_input ='$tgl_Input' where id='$id'");
    if($sql){
  ?>

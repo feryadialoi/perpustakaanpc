@@ -25,7 +25,7 @@
               <tbody>
                   <?php
                     $no = 1;
-                    $sql = $koneksi -> query("SELECT * FROM tb_buku");
+                    $sql = $conn -> query("SELECT * FROM tb_buku");
                     while ($data= $sql-> fetch_assoc()){
                   ?>
                   <tr>
@@ -56,7 +56,7 @@
   <?php
   $no = 1;
   $query = "SELECT * FROM tb_buku";
-  $sql = $koneksi -> query($query);
+  $sql = $conn -> query($query);
   $data= $sql-> fetch_assoc();
 
   ?>

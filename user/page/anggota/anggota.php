@@ -28,8 +28,8 @@
                         $no = 1;
                         // $query = "SELECT * FROM tb_anggota WHERE nis LIKE '%o%' OR nama LIKE '%o%' OR tmp_lahir LIKE '%o%' OR tgl_lahir LIKE '%o%' OR jk LIKE '%o%' OR tingkat LIKE '%o%'";
                         $query = "SELECT * FROM tb_anggota";
-                        // $sql = $koneksi -> query("select*from tb_anggota");
-                        $sql = $koneksi -> query($query);
+                        // $sql = $conn -> query("select*from tb_anggota");
+                        $sql = $conn -> query($query);
                         while ($data= $sql-> fetch_assoc()){
                         $jk = ($data['jk']=='l')?"Laki - Laki":"Perempuan";
                         ?>
@@ -82,8 +82,8 @@
         $no = 1;
         // $query = "SELECT * FROM tb_anggota WHERE nis LIKE '%o%' OR nama LIKE '%o%' OR tmp_lahir LIKE '%o%' OR tgl_lahir LIKE '%o%' OR jk LIKE '%o%' OR tingkat LIKE '%o%'";
         $query = "SELECT * FROM tb_anggota";
-        // $sql = $koneksi -> query("select*from tb_anggota");
-        $sql = $koneksi -> query($query);
+        // $sql = $conn -> query("select*from tb_anggota");
+        $sql = $conn -> query($query);
         $data= $sql-> fetch_assoc();
         ?>
         <a href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger modalawidth">Ya</a>

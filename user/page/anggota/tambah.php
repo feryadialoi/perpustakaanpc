@@ -72,14 +72,14 @@
  $simpan = $_POST['simpan'];
   if($simpan){
     //$cek validasi data input ganda 'note kevin'
-    $cek = mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM tb_anggota WHERE nis='$nis'"));
+    $cek = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM tb_anggota WHERE nis='$nis'"));
    if ($cek > 0){
    echo "<script>window.alert('NIS ini sudah terdaftar!')
    window.location='?page=anggota&aksi=tambah'</script>";
  }
     else{
       //koneksi ke db n save data yg sudah di cek 'note kevin'
-    $sql = $koneksi->query("insert into tb_anggota (nis,nama,tmp_lahir,tgl_lahir,jk,tingkat)
+    $sql = $conn->query("insert into tb_anggota (nis,nama,tmp_lahir,tgl_lahir,jk,tingkat)
     values('$nis','$nama','$tmp_lahir','$tgl_lahir','$jk','$tingkat')");
 }
 
