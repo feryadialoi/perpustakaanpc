@@ -18,7 +18,7 @@ $lokasi = $tampil['lokasi'];
                            <div class="row">
                                <div class="col-md-12">
 
-                                   <form method="POST">
+                                   <form method="POST" id="formEditBuku">
                                        <div class="form-group">
                                            <label>Judul Buku</label>
                                            <input class="form-control" name="judul" value="<?php echo $tampil['judul'];  ?>"/>
