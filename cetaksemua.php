@@ -2,13 +2,14 @@
 require_once __DIR__ . '/vendor/autoload.php';
 include 'function.php';
 include 'koneksi.php';
-$mpdf = new \Mpdf\Mpdf();
+// $mpdf = new \Mpdf\Mpdf();
+$mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 
 $html = '
 <h2 align="center">LAPORAN</h2>
 <p align="center">Perpustakaan Sekolah Pelita Cemerlang</p>
 Data Peminjaman Buku 30 Hari Terakhir
-<table border="1" cellspacing="0" cellpadding="5">
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
   <thead>
     <tr>
       <th>No</th>
