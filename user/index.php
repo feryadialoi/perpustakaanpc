@@ -360,17 +360,12 @@
 </script>
 <script>
         $(document).ready(function () {
-            $('#dataTables-example-pinjam').dataTable();
+            $('#dataTables-example-Pinjam').dataTable();
         });
 </script>
 <script>
         $(document).ready(function () {
-            $('#dataTables-example-kembali').dataTable();
-        });
-</script>
-<script>
-        $(document).ready(function () {
-            $('#dataTables-example-total').dataTable();
+            $('#dataTables-example-Kembali').dataTable();
         });
 </script>
 <!-- CUSTOM SCRIPTS -->

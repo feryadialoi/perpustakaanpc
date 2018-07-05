@@ -365,6 +365,16 @@
             $('#dataTables-example').dataTable();
         });
 </script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-Pinjam').dataTable();
+        });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example-Kembali').dataTable();
+        });
+</script>
 <!-- CUSTOM SCRIPTS -->
 <!-- <script src="../assets/js/custom.js"></script> -->
 </body>
