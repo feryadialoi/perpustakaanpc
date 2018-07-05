@@ -207,6 +207,7 @@
             // page laporan:
             elseif($page == "laporan"){
               if (isset($_GET['aksi'])){
+<<<<<<< HEAD
                 // if ($aksi=="semua"){
                 //   include "../cetaksemua.php";
                 // }
@@ -217,8 +218,20 @@
                 //   include "./page/laporan/cetakkembali.php";
                 // }
               }
+=======
+                if ($aksi=="anggota"){
+                  include "./page/laporan/anggota/anggota.php";
+                }
+    				elseif ($aksi=="buku"){
+                  include "./page/laporan/buku/buku.php";
+    				 }
+    				 elseif ($aksi=="transaksi"){
+                      include "./page/laporan/transaksi/transaksi.php";
+    				 }
+           }
+>>>>>>> 1799c2e96067aa869ab8c1989a1df71ec006fe0d
               else {
-                include "./page/laporan.php";
+                include "./page/laporan/laporan.php";
               }
             }
             // page pengaturan:

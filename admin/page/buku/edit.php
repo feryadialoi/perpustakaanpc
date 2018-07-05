@@ -1,7 +1,3 @@
-<!-- <div class="float-tombol">
-  <a class="btn btn-primary" href="?page=buku">Kembali</a>
-</div> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <?php $id= $_GET['id'];
 $sql = $conn->query("select * from tb_buku where id='$id'");
 
@@ -86,8 +82,7 @@ $lokasi = $tampil['lokasi'];
 
                                          </div>
                                          <div>
-                                           <!-- <input type="submit" name="simpan" value="Simpan" class="btn btn-primary"> -->
-                                           <button type="submit" name="simpan" form="formEditBuku" value="submit" class="btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
+                                           <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
                                          </div>
                                        </div>
                                      </form>
