@@ -18,7 +18,7 @@ Laporan Data Buku</strong></p>
       <th>Pengarang</th>
       <th>Penerbit</th>
       <th>Tahun Terbit</th>
-      <th>ISBN</th>
+      <th>Kode Buku (ISBN)</th>
       <th>Jumlah Buku</th>
       <th>Lokasi</th>
       <th>Tanggal Input</th>
