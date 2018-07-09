@@ -34,7 +34,7 @@ $pdf->SetFont('Arial','',10);
 $query = mysqli_query($conn, "SELECT * FROM tb_anggota");
 while ($row = mysqli_fetch_array($query)){
 	$jk = ($row['jk']=='l')?"Laki - Laki":"Perempuan";
-	
+
     $pdf->Cell(20,10,$no,1,0,'C');
     $pdf->Cell(40,10,$row['nis'],1,0,'C');
     $pdf->Cell(40,10,$row['nama'],1,0,'C');

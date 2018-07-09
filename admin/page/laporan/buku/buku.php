@@ -51,4 +51,4 @@
 </div>
 </div>
 </div>
- <a class="btn btn-primary" href="page/laporan/buku/print/pdf_mysql.php"><i class="material-icons md-18">print</i> PRINT</a>
+ <a target="_blank" class="btn btn-primary" href="page/laporan/buku/print/pdf_mysql.php"><i class="material-icons md-18">print</i> PRINT</a>
