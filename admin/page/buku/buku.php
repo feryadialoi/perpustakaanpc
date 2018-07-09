@@ -1,13 +1,4 @@
-
-
-
-
-
-
-
 <a href="?page=buku&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">add</i> Tambah Buku</a>
-<a href="cetak.php" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">add</i> CETAK</a>
-
 <div class="row">
   <div class="col-md-12">
     <!-- Table data buku -->
@@ -46,8 +37,8 @@
                     <td><?php echo $data['jumlah_buku'];?></td>
                     <td>
                       <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
-                      <!-- <button class="btn btn-danger" onclick="document.getElementById('modalHapusBuku').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i>Delete</a>
+                      <button class="btn btn-danger" onclick="document.getElementById('modalHapusBuku').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button>
+                      <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php //echo $data['id'];?>" class="btn btn-danger">Delete</a> -->
                     </td>
                   </tr>
 

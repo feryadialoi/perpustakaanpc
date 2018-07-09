@@ -28,7 +28,7 @@
                         $no = 1;
                         // $query = "SELECT * FROM tb_anggota WHERE nis LIKE '%o%' OR nama LIKE '%o%' OR tmp_lahir LIKE '%o%' OR tgl_lahir LIKE '%o%' OR jk LIKE '%o%' OR tingkat LIKE '%o%'";
                         $query = "SELECT * FROM tb_anggota";
-                        // $sql = $conn -> query("select*from tb_anggota");
+                        // $sql = $koneksi -> query("select*from tb_anggota");
                         $sql = $conn -> query($query);
                         while ($data= $sql-> fetch_assoc()){
                         $jk = ($data['jk']=='l')?"Laki - Laki":"Perempuan";
@@ -45,8 +45,8 @@
                           <td>
                             <!-- <div class="Aksi"> -->
                               <a href="?page=anggota&aksi=edit&id=<?php echo $data['nis'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
-                              <!-- <button class="btn btn-danger" onclick="document.getElementById('modalHapusAnggota').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-                              <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i>Delete</a>
+                              <button class="btn btn-danger" onclick="document.getElementById('modalHapusAnggota').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button>
+                              <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a> -->
                           </div>
                           </td>
                         </tr>
@@ -82,7 +82,7 @@
         $no = 1;
         // $query = "SELECT * FROM tb_anggota WHERE nis LIKE '%o%' OR nama LIKE '%o%' OR tmp_lahir LIKE '%o%' OR tgl_lahir LIKE '%o%' OR jk LIKE '%o%' OR tingkat LIKE '%o%'";
         $query = "SELECT * FROM tb_anggota";
-        // $sql = $conn -> query("select*from tb_anggota");
+        // $sql = $koneksi -> query("select*from tb_anggota");
         $sql = $conn -> query($query);
         $data= $sql-> fetch_assoc();
         ?>
