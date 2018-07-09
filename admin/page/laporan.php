@@ -1,10 +1,6 @@
 <?php include '../function.php'; ?>
-  <!-- <div class="" style="text-align: center;padding-top: 100px;">
-    <p class="dashboard-text">COMING SOON!</p>
-  </div> -->
 
 <!-- Bulanan -->
-<!-- <a href="?page=laporan&aksi=semua" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">print</i> Cetak Laporan</a> -->
 <a target="_blank" href="../cetaksemua.php" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">print</i> Cetak Laporan</a>
 <div class="row">
 <div class="col-md-12">
