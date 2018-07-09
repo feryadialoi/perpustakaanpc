@@ -8,11 +8,9 @@
   if($_SESSION['status'] !="loginAdmin") {
     header("location:../index.php");
   }
-  $koneksi = new mysqli ("localhost","root","","perpustakaan");
 ?>
 <!-- php code untuk session login mengecek status login end-->
 
-<!-- php code untuk session login mengecek status login end-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -211,13 +209,13 @@
                 if ($aksi=="anggota"){
                   include "./page/laporan/anggota/anggota.php";
                 }
-    				elseif ($aksi=="buku"){
+	              elseif ($aksi=="buku"){
                   include "./page/laporan/buku/buku.php";
-    				 }
-    				 elseif ($aksi=="transaksi"){
-                      include "./page/laporan/transaksi/transaksi.php";
-    				 }
-           }
+	              }
+		            elseif ($aksi=="transaksi"){
+                  include "./page/laporan/transaksi/transaksi.php";
+                }
+              }
               else {
                 include "./page/laporan/laporan.php";
               }

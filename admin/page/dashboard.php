@@ -4,7 +4,7 @@
 <!-- menu dashboard start-->
 <hr>
 <div class="row">
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4">
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-6 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Anggota :</p>
       <p>
@@ -17,9 +17,8 @@
       </p>
       <hr>
     </div>
-    <!-- <a class="dash-item col-sm-12 col-xs-12" href="index.php"><i class="material-icons">dashboard</i> Dashboard</a> -->
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4">
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-6 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Judul Buku :</p>
       <p>
@@ -32,9 +31,23 @@
       </p>
       <hr>
     </div>
-    <!-- <a class="dash-item col-sm-12 col-xs-12" href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a> -->
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4">
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-6 col-xl-4">
+    <div class="dash-item col-sm-12 col-xs-12">
+      <p>Jumlah Total Buku :</p>
+      <p>
+        <?php
+        $sql = "SELECT SUM(jumlah_buku) AS total_buku FROM tb_buku";
+          $result = mysqli_query($conn,$sql);
+          $rows = mysqli_fetch_assoc($result);
+          $sum = $rows['total_buku'];
+          echo "<strong>".$sum." buku</strong>";
+        ?>
+      </p>
+      <hr>
+    </div>
+  </div>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-6 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Pengunjung 30 Hari Terakhir :</p>
       <p>
@@ -47,17 +60,36 @@
       </p>
       <hr>
     </div>
-    <!-- <a class="dash-item col-sm-12 col-xs-12" href="?page=buku"><i class="material-icons">book</i> Buku</a> -->
   </div>
-  <!-- <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-    <a class="dash-item col-sm-12 col-xs-12" href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
-  </div> -->
-  <!-- <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-    <a class="dash-item col-sm-12 col-xs-12" href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
-  </div> -->
-  <!-- <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-    <a class="dash-item col-sm-12 col-xs-12" href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a>
-  </div> -->
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-6 col-xl-4">
+    <div class="dash-item col-sm-12 col-xs-12">
+      <p>Jumlah Buku Yang Dipinjam 30 Hari Terakhir :</p>
+      <p>
+        <?php
+          $sql = "SELECT * FROM tb_transaksi WHERE status='pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
+          $result = mysqli_query($conn,$sql);
+          $rows = mysqli_num_rows($result);
+          echo "<strong>".$rows." buku</strong>";
+        ?>
+      </p>
+      <hr>
+    </div>
+  </div>
+  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-6 col-xl-4">
+    <div class="dash-item col-sm-12 col-xs-12">
+      <p>Jumlah Buku Yang Dikembalikan 30 Hari Terakhir :</p>
+      <p>
+        <?php
+          $sql = "SELECT * FROM tb_transaksi WHERE status='kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
+          $result = mysqli_query($conn,$sql);
+          $rows = mysqli_num_rows($result);
+          echo "<strong>".$rows." buku</strong>";
+        ?>
+      </p>
+      <hr>
+    </div>
+  </div>
+
 </div>
 <hr>
 <!-- menu dashboard end -->

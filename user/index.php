@@ -11,7 +11,6 @@
 ?>
 <!-- php code untuk session login mengecek status login end-->
 
-<!-- php code untuk session login mengecek status login end-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -207,12 +206,18 @@
             // page laporan:
             elseif($page == "laporan"){
               if (isset($_GET['aksi'])){
-                // if ($aksi=="laporan1"){
-                //   include "./page/laporan1.php";
-                // }
+                if ($aksi=="anggota"){
+                  include "./page/laporan/anggota/anggota.php";
+                }
+	              elseif ($aksi=="buku"){
+                  include "./page/laporan/buku/buku.php";
+	              }
+		            elseif ($aksi=="transaksi"){
+                  include "./page/laporan/transaksi/transaksi.php";
+                }
               }
               else {
-                include "./page/laporan.php";
+                include "./page/laporan/laporan.php";
               }
             }
             // page pengaturan:
