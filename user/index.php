@@ -373,14 +373,14 @@
         });
 </script>
 <script>
-        $(document).ready(function () {
-            $('#dataTables-example-Pinjam').dataTable();
-        });
+        // $(document).ready(function () {
+        //     $('#dataTables-example-pinjam').dataTable();
+        // });
 </script>
 <script>
-        $(document).ready(function () {
-            $('#dataTables-example-Kembali').dataTable();
-        });
+        // $(document).ready(function () {
+        //     $('#dataTables-example-kembali').dataTable();
+        // });
 </script>
 <!-- CUSTOM SCRIPTS -->
 <!-- <script src="../assets/js/custom.js"></script> -->
