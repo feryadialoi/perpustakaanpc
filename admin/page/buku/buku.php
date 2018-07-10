@@ -38,7 +38,7 @@
                     <td>
                       <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
                       <!-- <button class="btn btn-danger" onclick="document.getElementById('modalHapusBuku').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php //echo $data['id'];?>" class="btn btn-danger">Delete</a>
+                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php //echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a>
                     </td>
                   </tr>
 

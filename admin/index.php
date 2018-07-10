@@ -3,7 +3,6 @@
   include '../koneksi.php';
   //mengaktifkan session_start
   session_start();
-  //
   //cek apakah user telah login, jika belum login maka di alihkan ke halaman Login
   if($_SESSION['status'] !="loginAdmin") {
     header("location:../index.php");
@@ -12,20 +11,15 @@
 <!-- php code untuk session login mengecek status login end-->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Anggota - Perpustakaan Pelita Cemerlang</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  <link rel="stylesheet" href="../assets/css/bootstrap.ba.css">
-  <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <!-- <link rel="stylesheet" href="../assets/css/custom.css"> -->
-
-  <!-- TABLE STYLES-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" >
   <link rel="shortcut icon" href="../assets/img/logo.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
 </head>
 <body onload="setInterval('displayServerTime()', 1000);">
   <!-- topbar menu start -->
@@ -34,7 +28,7 @@
       <button class="hamburger-button" onclick="toggleNav()"><i class="material-icons logout-button">menu</i></button>
     </div>
     <div id="logoutButton" class="hamburger hamburger-logout">
-      <button class="hamburger-button" onclick="document.getElementById('modallogout').style.display='block'" ><i class="material-icons logout-button">exit_to_app</i> Logout</button>
+      <button class="hamburger-button" data-toggle="modal" data-target="#myModal"><i class="material-icons logout-button">exit_to_app</i> Logout</button>
     </div>
     <div class="top-bar-menu">
       <script type="text/javascript">
@@ -147,7 +141,6 @@
             $page = $_GET['page'];
             $aksi = $_GET['aksi'];
 
-
             // halaman klik
             // page anggota: tambah, edit, hapus
             if($page == "anggota"){
@@ -229,17 +222,6 @@
                 include "./page/laporan/laporan.php";
               }
             }
-            // page pengaturan:
-            // elseif($page == "pengaturan"){
-            //   if (isset($_GET['pengaturan'])){
-            //     if ($aksi=="pengaturan"){
-            //       include "./page/pengaturan1.php";
-            //     }
-            //   }
-            //   else {
-            //     include "./page/pengaturan.php";
-            //   }
-            // }
             else {
               include "./page/dashboard.php";
             }
@@ -265,33 +247,28 @@
   }
   </script>
 
-<!-- modal start -->
-<div id="modallogout" class="modal">
-  <div class="modal-content animate" action="/action_page.php">
-    <div class="head">
-      <span onclick="document.getElementById('modallogout').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
-    <div class="container">
-      <h2>Logout</h2>
-      <p>
-        Apa anda yakin untuk keluar?
-        <br>
-        <br>
-      </p>
-    </div>
-
-    <div class="container-modal">
-      <!-- <div class="logout-btn"> -->
-      <div class="logout-btn2">
-        <a href="logout.php" class="btn btn-danger modalawidth">Ya</a>
-        <button type="button" onclick="document.getElementById('modallogout').style.display='none'" class="btn btn-primary modalbtnwidth">Tidak</button>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Logout</h4>
+        </div>
+        <div class="modal-body">
+          <p>Apa anda yakin keluar ?</p>
+        </div>
+        <div class="modal-footer">
+          <a style="min-width:80px;" href="logout.php" class="btn btn-danger modalawidth">Ya</a>
+          <button style="min-width:80px;" type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
+        </div>
       </div>
-      <!-- </div> -->
+
     </div>
   </div>
-</div>
-<!-- modal end -->
+
 
 <!-- script anti enter start -->
 <script type="text/javascript">
@@ -302,7 +279,7 @@
   }
   document.onkeypress = stopRKey;
 </script>
-<!-- script anri enter end -->
+<!-- script anti enter end -->
 
 <!-- generator transaksi bag nis dan nama murid start-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -358,31 +335,27 @@
   </script>
 <!-- generator bag isbn dan nama buku end-->
 
-<script src="../assets/js/jquery/jquery-331.js"></script>
-<script src="../assets/js/jquery/jquery-320.min.js"></script>
-<script src="../assets/js/bootstrap.js"></script>
-<script src="../assets/js/jquery-1.10.2.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
-<script src="../assets/js/jquery.metisMenu.js"></script>
+<script type="text/javascript"src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 
-<script src="../assets/js/dataTables/jquery.dataTables.js"></script>
-<script src="../assets/js/dataTables/dataTables.bootstrap.js"></script>
-<script>
-        $(document).ready(function () {
-            $('#dataTables-example').dataTable();
-        });
+<script type="text/javascript">
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+  });
+  $(document).ready(function () {
+    $('#dataTables-example').DataTable();
+  });
+
+  $(document).ready(function () {
+    $('#dataTables-example-pinjam').DataTable();
+  });
+
+  $(document).ready(function () {
+    $('#dataTables-example-kembali').DataTable();
+  });
 </script>
-<script>
-        // $(document).ready(function () {
-        //     $('#dataTables-example-pinjam').dataTable();
-        // });
-</script>
-<script>
-        // $(document).ready(function () {
-        //     $('#dataTables-example-kembali').dataTable();
-        // });
-</script>
-<!-- CUSTOM SCRIPTS -->
-<!-- <script src="../assets/js/custom.js"></script> -->
 </body>
 </html>

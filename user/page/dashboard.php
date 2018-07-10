@@ -104,7 +104,7 @@
    </div>
    <div class="panel-body">
     <div class="table-responsive">
-      <table class="table table-striped table-bordered table-hover" id="dataTables-example-Pinjam">
+      <table class="table table-striped table-bordered table-hover" id="dataTables-example-pinjam">
         <thead>
           <tr>
               <th>No</th>
@@ -115,7 +115,6 @@
               <th>Tanggal Kembali</th>
               <th>Terlambat</th>
               <th>Status</th>
-              <!-- <th>Aksi </th> -->
           </tr>
         </thead>
           <!-- fetching item dari database ke form -->
@@ -151,10 +150,6 @@
                 ?>
               </td>
               <td><?php echo $data['status'];?></td>
-              <!-- <td>
-                 <a href="?page=transaksi&aksi=perpanjang&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>&lambat=<?php echo $lambat; ?>&tgl_kembali=<?php echo $data['tgl_kembali']; ?>" class="btn btn-info"><i class="material-icons md-18">next_week</i> Perpanjang</a>
-                 <a href="?page=transaksi&aksi=kembali&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>" class="btn btn-info"><i class="material-icons md-18">check</i> Kembalikan</a>
-              </td> -->
           <?php } ?>
           </tr>
         </tbody>
@@ -173,7 +168,7 @@
    </div>
    <div class="panel-body">
     <div class="table-responsive">
-      <table class="table table-striped table-bordered table-hover" id="dataTables-example-Kembali">
+      <table class="table table-striped table-bordered table-hover" id="dataTables-example-kembali">
         <thead>
           <tr>
               <th>No</th>
@@ -184,7 +179,6 @@
               <th>Tanggal Kembali</th>
               <th>Terlambat</th>
               <th>Status</th>
-              <!-- <th>Aksi </th> -->
           </tr>
         </thead>
           <!-- fetching item dari database ke form -->
@@ -220,10 +214,6 @@
                 ?>
               </td>
               <td><?php echo $data['status'];?></td>
-              <!-- <td>
-                 <a href="?page=transaksi&aksi=perpanjang&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>&lambat=<?php echo $lambat; ?>&tgl_kembali=<?php echo $data['tgl_kembali']; ?>" class="btn btn-info"><i class="material-icons md-18">next_week</i> Perpanjang</a>
-                 <a href="?page=transaksi&aksi=kembali&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>" class="btn btn-info"><i class="material-icons md-18">check</i> Kembalikan</a>
-              </td> -->
           <?php } ?>
           </tr>
         </tbody>

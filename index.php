@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="shortcut icon" href="./assets/img/logo.png">
     <style>
@@ -25,12 +25,12 @@
       <center><span class="login-title">Perpustakaan Pelita Cemerlang</span></center>
     </div>
     <div class="panel_body">
-      <center><img src="./assets/img/logo.png" alt="logo" width="150px"></center>
+      <center><img src="./assets/img/logo.png" alt="logo" width="200px"></center>
       <form role="form" action="login.php" method="post" id="form" onsubmit="return validasi()">
-        <div class="form-group input-group">
+        <div class="form-group">
           <input id="username" class="form-control" type="text" name="username" placeholder="Username" required>
         </div>
-        <div class="form-group input-group">
+        <div class="form-group">
           <input id="password" class="form-control" type="password" name="password" placeholder="Password" required>
         </div>
         <hr><!--  garis pembatas -->

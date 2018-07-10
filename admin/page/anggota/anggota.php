@@ -8,7 +8,8 @@
           </div>
           <div class="panel-body">
               <div class="table-responsive" id="container-table-anggota">
-                  <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                  <!-- <table class="table table-striped table-bordered table-hover" id="dataTables-example"> -->
+                  <table class="table table-striped table-bordered table-hover" id="myTable">
                       <thead>
                           <tr>
                               <th>No</th>
@@ -46,7 +47,7 @@
                             <!-- <div class="Aksi"> -->
                               <a href="?page=anggota&aksi=edit&id=<?php echo $data['nis'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
                               <!-- <button class="btn btn-danger" onclick="document.getElementById('modalHapusAnggota').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-                              <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a>
+                              <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a>
                           </div>
                           </td>
                         </tr>

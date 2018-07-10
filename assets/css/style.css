@@ -106,6 +106,13 @@ body {
     font-size: 14px;
     text-decoration:none;
 }
+
+.tab a:hover{
+  color: white;
+}
+.tab button:hover{
+  color: white;
+}
 .Aksi i{
   transform: translateX(0%) translateY(10%);
 }
@@ -197,134 +204,9 @@ a{
     background-color: #2455f4;
 }
 
-/* modal */
 
 
-/* Extra styles for the cancel button */
-.modalbtnwidth{
-  width: 80px;
-  /* padding: 8px 18px; */
-}
-.modalawidth{
-  width: 80px;
-  /* padding: 9px 32px 10px 32px; */
-}
-.modalbtn {
-    width: 80px;
-    padding: 8px 18px;
-    background-color: #2455f4;
-    color: white;
-    border: none;
-}
-.modala {
-  width: 80px;
-  padding: 9px 32px 10px 32px;
-  background-color: #2455f4;
-  color: white;
-  text-decoration: none;
-}
-.modalinp {
-  width: 80px;
-  padding: 9px 32px 10px 32px;
-  background-color: #2455f4;
-  color: white;
-  text-decoration: none;
-}
 
-/* Center the image and position the close button */
-.head {
-    text-align: center;
-    margin: 6px 0 6px 0;
-    position: relative;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container-modal {
-    padding: 16px;
-    background-color:#f1f1f1;
-}
-
-div.logout-btn2 {
-    float: right;
-    /* padding-top: 16px; */
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 5; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 100px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    max-width: 450px; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    div.logout-btn {
-       display: block;
-       float: none;
-    }
-
-    .modalbtn {
-       width: 100%;
-    }
-    .modala {
-       width: 100%;
-    }
-    .modalinp{
-      width: 100%;
-    }
-}
 
 .logout-btn button:hover {
     background-color: #1f41b5;
