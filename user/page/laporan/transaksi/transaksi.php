@@ -24,7 +24,12 @@
                           </div>
 		                      <div class="col-md-3">
 
-                                <a href="?page=laporan&aksi=bsp" class="btn btn-primary" style="margin-bottom: 1px"><i class="material-icons md-18">book</i> Berdasarkan Status Peminjaman</a>
+                                <a href="?page=laporan&aksi=bsp" class="btn btn-primary" style="margin-bottom: 1px"><i class="material-icons md-18">book</i> Berdasarkan Status Pinjam</a>
+
+                          </div>
+		                      <div class="col-md-3">
+
+                                <a href="?page=laporan&aksi=bsk" class="btn btn-primary" style="margin-bottom: 1px"><i class="material-icons md-18">book</i> Berdasarkan Status Kembali</a>
 
                           </div>
 

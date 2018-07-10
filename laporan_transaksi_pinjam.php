@@ -6,9 +6,10 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 
 $html = '
-<h2 align="center">LAPORAN</h2>
-<p align="center">Perpustakaan Sekolah Pelita Cemerlang</p>
-Belum Dikembalikan (30 Hari Terakhir)
+<body style="font-family:arial;">
+<H2 align="center">Sekolah Pelita Cemerlang</H2>
+<p align="center"><strong>Jl. Perdana no. 18 Pontianak Tenggara<br>
+Laporan Data Transaksi Berstatus Kembali</strong></p>
 <table width="100%" border="1" cellspacing="0" cellpadding="5">
   <thead>
     <tr>

@@ -215,6 +215,15 @@
 		            elseif ($aksi=="transaksi"){
                   include "./page/laporan/transaksi/transaksi.php";
                 }
+		            elseif ($aksi=="btgl"){
+                  include "./page/laporan/transaksi/transaksi_tgl.php";
+                }
+		            elseif ($aksi=="bsp"){
+                  include "./page/laporan/transaksi/transaksi_bsp.php";
+                }
+		            elseif ($aksi=="bsk"){
+                  include "./page/laporan/transaksi/transaksi_bsk.php";
+                }
               }
               else {
                 include "./page/laporan/laporan.php";
