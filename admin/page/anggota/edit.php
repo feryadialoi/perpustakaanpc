@@ -63,7 +63,7 @@ $tingkat_A=$tampil['tingkat'];
                                              </div>
                                             <div>
                                               <!-- <input type="submit" name="simpan" value="Simpan" class="btn btn-primary"> -->
-                                              <button type="submit" name="simpan" form="formEditAnggota" value="submit" class="btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
+                                              <button type="submit" name="simpan" form="formEditAnggota" value="submit" class="simpan_data btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
                                             </div>
                                           </div>
                                         </form>
@@ -89,10 +89,14 @@ $tingkat_A=$tampil['tingkat'];
     if($sql){
   ?>
       <script type="text/javascript">
-      alert("Data Berhasil Disimpan!")
+      alert("Data Berhasil Disimpan!");
       // lempar ke anggota.php
       window.location.href="?page=anggota";
       </script>
+
+
+
+
 
       <?php
     }
