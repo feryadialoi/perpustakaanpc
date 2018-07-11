@@ -100,7 +100,7 @@
 <div class="col-md-12">
 <div class="panel panel-default">
   <div class="panel-heading">
-     Data Peminjaman Buku 30 Hari Terakhir
+     Data Peminjaman Buku Berstatus Pinjam 30 Hari Terakhir
    </div>
    <div class="panel-body">
     <div class="table-responsive">
@@ -164,7 +164,7 @@
 <div class="col-md-12">
 <div class="panel panel-default">
   <div class="panel-heading">
-     Data Peminjaman Buku 30 Hari Terakhir
+     Data Peminjaman Buku Berstatus Kembali 30 Hari Terakhir
    </div>
    <div class="panel-body">
     <div class="table-responsive">
