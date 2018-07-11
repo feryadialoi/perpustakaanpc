@@ -26,7 +26,8 @@ Laporan Data Transaksi Berstatus Kembali</strong></p>
   <tbody>'.
 
   $no = 1;
-  $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status = 'pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+  // $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status = 'pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+     $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
   while ($data= $sql-> fetch_assoc()){
     $html .=
     '<tr>
