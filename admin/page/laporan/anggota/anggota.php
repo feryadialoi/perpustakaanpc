@@ -47,5 +47,5 @@
 </div>
 </div>
 </div>
- <a target="_blank" class="btn btn-primary" href="page/laporan/anggota/print/pdf_mysql.php" style="margin-bottom: 10px"><i class="material-icons md-18">print</i> PRINT</a>
+ <!-- <a target="_blank" class="btn btn-primary" href="page/laporan/anggota/print/pdf_mysql.php" style="margin-bottom: 10px"><i class="material-icons md-18">print</i> PRINT</a> -->
  <a target="_blank" href="../laporan_anggota.php" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">print</i> Cetak Laporan</a>
