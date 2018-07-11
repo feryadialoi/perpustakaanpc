@@ -42,7 +42,7 @@
                       <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a> -->
 
                       <!-- testing -->
-                      <a class="btn btn-danger hapus_data_buku" data-id="<?php echo $data['id']; ?>" href="javascript:void(0)"><i class="material-icons md-18">delete</i> Delete</a>
+                      <a class="btn btn-danger hapus_data_buku" data-id="<?php echo $data['id']; ?>" href="javascript:void(0)"><i class="material-icons md-18">delete</i> Hapus</a>
 
                     </td>
                   </tr>
