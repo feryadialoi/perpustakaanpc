@@ -29,13 +29,14 @@
 	$p = mysqli_query($conn,"SELECT * FROM tb_anggota");
 
 	while($data = mysqli_fetch_array($p)){
+	  $jk = ($data['jk']=='l')?"Laki - Laki":"Perempuan";
 		echo"<tr>
 				<td>$no</td>
 				<td>$data[nis]</td>
 				<td>$data[nama]</td>
 				<td>$data[tmp_lahir]</td>
 				<td>$data[tgl_lahir]</td>
-				<td>$data[jk]</td>
+				<td>$jk</td>
 				<td>$data[tingkat]</td>
 			</tr>";
 	$no++;
