@@ -444,35 +444,56 @@
 </script>
 
 
-
-
-
 <!-- <script>
-  $(document).ready(function(){
+	$(document).ready(function(){
 
-    $('.simpan_data').click(function(e){
+		$('.simpan_data_anggota').click(function(e){
 
-      e.preventDefault();
+			e.preventDefault();
 
-      bootbox.dialog({
-        message: "Data Berhasil Disimpan!",
-        title: "<i class='glyphicon glyphicon-trash'></i> Simpan",
-        buttons: {
-          success: {
-            label: "OK",
-            className: "btn-success",
-            callback: function() {
-            $('.bootbox').modal('hide');
+			var pid = $(this).attr('data-id');
+			var parent = $(this).parent("td").parent("tr");
 
+			bootbox.dialog({
+			  message: "Anda yakin ingin Menyimpan?",
+			  title: "<i class='glyphicon glyphicon-trash'></i> Simpan!",
+			  buttons: {
+				success: {
+				  label: "Batal",
+				  className: "btn-success",
+				  callback: function() {
+					 $('.bootbox').modal('hide');
+				  }
+				},
+				danger: {
+				  label: "Hapus!",
+				  className: "btn-danger",
+				  callback: function() {
 
-             window.location.href="?page=anggota";
-            }
-          }
-        }
-      });
-    });
-  });
+            $.ajax({
+						  type: 'POST',
+						  // url: '../hapusAnggota.php',
+						  url: './page/anggota/edit.php',
+              data: {
+                'id': pid,
+
+              }
+					  })
+					  .done(function(response){
+						  bootbox.alert(response);
+						  parent.fadeOut('slow');
+					  })
+					  .fail(function(){
+						  bootbox.alert('Ada yang salah...');
+					  })
+				  }
+				}
+			  }
+			});
+		});
+	});
 </script> -->
+
 
 <script type="text/javascript">
   $(document).ready( function () {

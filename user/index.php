@@ -261,7 +261,7 @@
             <p>Apa anda yakin keluar ?</p>
           </div>
           <div class="modal-footer">
-            <a style="min-width:80px;" href="logout.php" class="btn btn-danger modalawidth">Ya</a>
+            <a style="min-width:80px;" href="logout.php" class="btn btn-danger">Ya</a>
             <button style="min-width:80px;" type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
           </div>
         </div>

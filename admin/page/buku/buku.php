@@ -38,14 +38,12 @@
                     <td>
                       <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
                       <!-- <button class="btn btn-danger" onclick="document.getElementById('modalHapusBuku').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-<<<<<<< HEAD
-                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a>
-=======
-                      <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php //echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a> -->
+                      <!-- default -->
+                      <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a> -->
 
                       <!-- testing -->
                       <a class="btn btn-danger hapus_data_buku" data-id="<?php echo $data['id']; ?>" href="javascript:void(0)"><i class="material-icons md-18">delete</i> Delete</a>
->>>>>>> 90ed4b171cd93bf8331977b52350454f6ed9e35e
+
                     </td>
                   </tr>
 

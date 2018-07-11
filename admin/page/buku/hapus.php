@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<!-- ini page hapus buku
-<div class="float-tombol">
-  <a class="btn btn-primary" href="?page=buku">Kembali</a>
-</div> -->
-<<?php
-  $id = $_GET['id'];
-  $koneksi->query("delete from tb_buku where id ='$id'");
-?>
 
-<script type="text/javascript">
-  alert("Data Berhasil Dihapus!")
-  window.location.href="?page=buku";
-</script>
-=======
  <?php
   $conn = mysqli_connect('localhost','root','','perpustakaan');
   $id = $_GET['id'];
@@ -45,4 +31,3 @@
        });
      });
  </script>
->>>>>>> 90ed4b171cd93bf8331977b52350454f6ed9e35e
