@@ -25,7 +25,7 @@
   <!-- topbar menu start -->
   <div class="top-bar">
     <div class="hamburger">
-      <button class="hamburger-button" onclick="toggleNav()"><i class="material-icons logout-button">menu</i></button>
+      <button id="ham"class="hamburger-button" onclick="toggleNav()"><i class="material-icons logout-button">menu</i></button>
     </div>
     <div id="logoutButton" class="hamburger hamburger-logout">
       <button class="hamburger-button" data-toggle="modal" data-target="#myModal"><i class="material-icons logout-button">exit_to_app</i> Logout</button>
@@ -121,11 +121,11 @@
     </div>
     <!-- logo dan tagline end -->
     <!-- menu sidenav start -->
-    <a href="index.php"><i class="material-icons">dashboard</i> Dashboard</a>
-    <a href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a>
-    <a href="?page=buku"><i class="material-icons">book</i> Buku</a>
-    <a href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
-    <a href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
+    <a class="<?php if($_GET['page'] == ''){ echo ' active';}?>" href="index.php"><i class="material-icons">dashboard</i> Dashboard</a>
+    <a class="<?php if($_GET['page'] == 'anggota'){ echo ' active';}?>" href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a>
+    <a class="<?php if($_GET['page'] == 'buku'){ echo ' active';}?>" href="?page=buku"><i class="material-icons">book</i> Buku</a>
+    <a class="<?php if($_GET['page'] == 'transaksi'){ echo ' active';}?>" href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
+    <a class="<?php if($_GET['page'] == 'laporan'){ echo ' active';}?>" href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
     <!-- <a href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a> -->
     <!-- menu sidenav end -->
   </div>
@@ -256,10 +256,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Logout</h4>
+          <h4 class="modal-title"><i class="material-icons">exit_to_app</i> Logout</h4>
         </div>
         <div class="modal-body">
-          <p>Apa anda yakin keluar ?</p>
+          <p>Anda yakin ingin keluar ?</p>
         </div>
         <div class="modal-footer">
           <a style="min-width:80px;" href="logout.php" class="btn btn-danger">Ya</a>
@@ -356,17 +356,10 @@
 
 			bootbox.dialog({
 			  message: "Anda yakin ingin menghapus?",
-			  title: "<i class='glyphicon glyphicon-trash'></i> Hapus!",
+			  title: "<i class='material-icons'>delete</i> Hapus",
 			  buttons: {
-				success: {
-				  label: "Batal",
-				  className: "btn-success",
-				  callback: function() {
-					 $('.bootbox').modal('hide');
-				  }
-				},
 				danger: {
-				  label: "Hapus!",
+				  label: "Hapus",
 				  className: "btn-danger",
 				  callback: function() {
 
@@ -385,6 +378,13 @@
 					  .fail(function(){
 						  bootbox.alert('Ada yang salah...');
 					  })
+				  }
+				},
+        success: {
+				  label: "Batal",
+				  className: "btn-primary",
+				  callback: function() {
+					 $('.bootbox').modal('hide');
 				  }
 				}
 			  }
@@ -406,17 +406,10 @@
 
 			bootbox.dialog({
 			  message: "Anda yakin ingin menghapus?",
-			  title: "<i class='glyphicon glyphicon-trash'></i> Hapus!",
+			  title: "<i class='material-icons'>delete</i> Hapus",
 			  buttons: {
-				success: {
-				  label: "Batal",
-				  className: "btn-success",
-				  callback: function() {
-					 $('.bootbox').modal('hide');
-				  }
-				},
 				danger: {
-				  label: "Hapus!",
+				  label: "Hapus",
 				  className: "btn-danger",
 				  callback: function() {
 
@@ -435,6 +428,13 @@
 					  .fail(function(){
 						  bootbox.alert('Ada yang salah...');
 					  })
+				  }
+				},
+        success: {
+				  label: "Batal",
+				  className: "btn-primary",
+				  callback: function() {
+					 $('.bootbox').modal('hide');
 				  }
 				}
 			  }

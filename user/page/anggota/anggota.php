@@ -44,7 +44,7 @@
                           <td><?php echo $data['tingkat'];?></td>
                           <!-- <td> -->
                             <!-- <div class="Aksi"> -->
-                              <!-- <a href="?page=anggota&aksi=edit&id=<?php //echo $data['nis'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
+                              <!-- <a href="?page=anggota&aksi=edit&id=<?php //echo $data['nis'];?>" class="btn btn-primary"><i class="material-icons md-18">edit</i> Edit</a>
                               <button class="btn btn-danger" onclick="document.getElementById('modalHapusAnggota').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
                               <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a> -->
                           <!-- </div> -->
