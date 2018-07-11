@@ -1,15 +1,32 @@
-<<?php
-<<<<<<< HEAD
+ <?php
+  $conn = mysqli_connect('localhost','root','','perpustakaan');
   $id = $_GET['id'];
-  $conn->query("delete from tb_buku where id ='$id'");
-?>
-=======
-$id = $_GET['id'];
-$koneksi->query("delete from tb_buku where id ='$id'");
+  // $conn->query("DELETE FROM tb_buku where id ='$id'");
+  $conn->query("DELETE FROM tb_buku where id ='".mysqli_escape_string($conn, $_POST['id'])."'");
  ?>
->>>>>>> 1799c2e96067aa869ab8c1989a1df71ec006fe0d
 
- <script type="text/javascript">
- window.location.href="?page=buku";
+ <!-- <script type="text/javascript">
+   alert("Data Berhasil Dihapus!")
+   window.location.href="?page=buku";
+ </script> -->
+
+ <script>
+   $(document).ready(function(){
+
+       bootbox.dialog({
+         message: "Data Berhasil Dihapus!",
+         title: "<i class='glyphicon glyphicon-trash'></i> Hapus",
+         buttons: {
+           success: {
+             label: "OK",
+             className: "btn-success",
+             callback: function() {
+             $('.bootbox').modal('hide');
+
+              // window.location.href="?page=anggota";
+             }
+           }
+         }
+       });
+     });
  </script>
- 

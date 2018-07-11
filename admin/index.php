@@ -39,6 +39,7 @@
           //buat object date berdasarkan waktu di client
           var clientTime = new Date();
           //hitung selisih
+          // var Diff = serverTime.getTime() - clientTime.getTime();
           var Diff = serverTime.getTime() - clientTime.getTime();
           //fungsi displayTime yang dipanggil di bodyOnLoad dieksekusi tiap 1000ms = 1detik
           function displayServerTime(){
@@ -261,7 +262,7 @@
           <p>Apa anda yakin keluar ?</p>
         </div>
         <div class="modal-footer">
-          <a style="min-width:80px;" href="logout.php" class="btn btn-danger modalawidth">Ya</a>
+          <a style="min-width:80px;" href="logout.php" class="btn btn-danger">Ya</a>
           <button style="min-width:80px;" type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
         </div>
       </div>
@@ -340,6 +341,138 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+<!-- ajax hapus anggota bootstrap modal -->
+<script>
+	$(document).ready(function(){
+
+		$('.hapus_data_anggota').click(function(e){
+
+			e.preventDefault();
+
+			var pid = $(this).attr('data-id');
+			var parent = $(this).parent("td").parent("tr");
+
+			bootbox.dialog({
+			  message: "Anda yakin ingin menghapus?",
+			  title: "<i class='glyphicon glyphicon-trash'></i> Hapus!",
+			  buttons: {
+				success: {
+				  label: "Batal",
+				  className: "btn-success",
+				  callback: function() {
+					 $('.bootbox').modal('hide');
+				  }
+				},
+				danger: {
+				  label: "Hapus!",
+				  className: "btn-danger",
+				  callback: function() {
+
+            $.ajax({
+						  type: 'POST',
+						  // url: '../hapusAnggota.php',
+						  url: './page/anggota/hapus.php',
+              data: {
+                'id': pid
+              }
+					  })
+					  .done(function(response){
+						  bootbox.alert(response);
+						  parent.fadeOut('slow');
+					  })
+					  .fail(function(){
+						  bootbox.alert('Ada yang salah...');
+					  })
+				  }
+				}
+			  }
+			});
+		});
+	});
+</script>
+
+<!-- ajax hapus buku bootstrap modal -->
+<script>
+	$(document).ready(function(){
+
+		$('.hapus_data_buku').click(function(e){
+
+			e.preventDefault();
+
+			var pid = $(this).attr('data-id');
+			var parent = $(this).parent("td").parent("tr");
+
+			bootbox.dialog({
+			  message: "Anda yakin ingin menghapus?",
+			  title: "<i class='glyphicon glyphicon-trash'></i> Hapus!",
+			  buttons: {
+				success: {
+				  label: "Batal",
+				  className: "btn-success",
+				  callback: function() {
+					 $('.bootbox').modal('hide');
+				  }
+				},
+				danger: {
+				  label: "Hapus!",
+				  className: "btn-danger",
+				  callback: function() {
+
+            $.ajax({
+						  type: 'POST',
+						  // url: '../hapusAnggota.php',
+						  url: './page/buku/hapus.php',
+              data: {
+                'id': pid
+              }
+					  })
+					  .done(function(response){
+						  bootbox.alert(response);
+						  parent.fadeOut('slow');
+					  })
+					  .fail(function(){
+						  bootbox.alert('Ada yang salah...');
+					  })
+				  }
+				}
+			  }
+			});
+		});
+	});
+</script>
+
+
+
+
+
+<!-- <script>
+  $(document).ready(function(){
+
+    $('.simpan_data').click(function(e){
+
+      e.preventDefault();
+
+      bootbox.dialog({
+        message: "Data Berhasil Disimpan!",
+        title: "<i class='glyphicon glyphicon-trash'></i> Simpan",
+        buttons: {
+          success: {
+            label: "OK",
+            className: "btn-success",
+            callback: function() {
+            $('.bootbox').modal('hide');
+
+
+             window.location.href="?page=anggota";
+            }
+          }
+        }
+      });
+    });
+  });
+</script> -->
 
 <script type="text/javascript">
   $(document).ready( function () {
@@ -357,5 +490,6 @@
     $('#dataTables-example-kembali').DataTable();
   });
 </script>
+
 </body>
 </html>

@@ -38,7 +38,10 @@
                     <td>
                       <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-info"><i class="material-icons md-18">edit</i> Edit</a>
                       <!-- <button class="btn btn-danger" onclick="document.getElementById('modalHapusBuku').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-                      <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php //echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a>
+                      <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php //echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a> -->
+
+                      <!-- testing -->
+                      <a class="btn btn-danger hapus_data_buku" data-id="<?php echo $data['id']; ?>" href="javascript:void(0)"><i class="material-icons md-18">delete</i> Delete</a>
                     </td>
                   </tr>
 
@@ -52,35 +55,3 @@
   </div>
 </div>
 <!-- <script src="../assets/js/ajax/ajaxBuku.js"></script> -->
-<div id="modalHapusBuku" class="modal">
-  <?php
-  $no = 1;
-  $query = "SELECT * FROM tb_buku";
-  $sql = $conn -> query($query);
-  $data= $sql-> fetch_assoc();
-
-  ?>
-  <div class="modal-content animate" action="/action_page.php">
-    <div class="head">
-      <span onclick="document.getElementById('modalHapusBuku').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-    <div class="container">
-      <h2>Hapus Buku</h2>
-      <p>
-        Anda Yakin Ingin Menghapus Data Buku Berikut?
-        <br>
-        <br>
-      </p>
-    </div>
-
-    <div class="container-modal">
-      <!-- <div class="logout-btn"> -->
-      <div class="logout-btn2">
-
-        <a href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger modalawidth">Ya</a>
-        <button type="button" onclick="document.getElementById('modalHapusBuku').style.display='none'" class="btn btn-primary modalbtnwidth">Tidak</button>
-      </div>
-      <!-- </div> -->
-    </div>
-  </div>
-</div>
