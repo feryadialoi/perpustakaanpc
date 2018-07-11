@@ -4,7 +4,7 @@
     <!-- Table data buku -->
     <div class="panel panel-default">
         <div class="panel-heading">
-             Data Buku
+             <h1>Data Buku</h1>
         </div>
 
         <div class="panel-body">

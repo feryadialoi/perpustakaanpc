@@ -15,7 +15,7 @@ $tingkat_A=$tampil['tingkat'];
 
  <div class="panel panel-default">
  <div class="panel-heading">
-   Edit Data Anggota
+   <h1>Edit Data Anggota</h1>
    </div>
    <div class="panel-body">
                               <div class="row">

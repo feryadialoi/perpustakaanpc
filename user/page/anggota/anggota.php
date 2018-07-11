@@ -4,7 +4,7 @@
       <!-- Table data anggota -->
       <div class="panel panel-default">
           <div class="panel-heading">
-               Data Anggota
+               <h1>Data Anggota</h1>
           </div>
           <div class="panel-body">
               <div class="table-responsive" id="container-table-anggota">

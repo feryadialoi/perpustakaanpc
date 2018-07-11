@@ -4,7 +4,7 @@
 <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <div class="panel panel-default">
 <div class="panel-heading">
-  Tambah Data Anggota
+  <h1>Tambah Data Anggota</h1>
   </div>
 <div class="panel-body">
                            <div class="row">

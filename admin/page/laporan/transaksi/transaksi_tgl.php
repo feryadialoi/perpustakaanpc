@@ -6,7 +6,7 @@
 <div class="col-md-12">
 <div class="panel panel-default">
   <div class="panel-heading">
-     Data Transaksi dalam 30 hari
+     <h1>Data Transaksi dalam 30 hari</h1>
    </div>
    <div class="panel-body">
     <div class="table-responsive">

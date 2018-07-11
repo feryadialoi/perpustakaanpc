@@ -1,7 +1,7 @@
 <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=transaksi"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <div class="panel panel-default">
 <div class="panel-heading">
-  Transaksi Peminjaman Buku
+  <h1>Transaksi Peminjaman Buku</h1>
 </div>
   <!-- free for Edit
   editable -->

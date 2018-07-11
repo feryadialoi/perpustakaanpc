@@ -5,7 +5,7 @@
 
 <div class="panel panel-default">
 <div class="panel-heading">
-  Tambah Data Buku
+  <h1>Tambah Data Buku</h1>
 </div>
   <script type=”text/javascript”>
 

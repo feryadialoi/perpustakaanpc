@@ -6,9 +6,10 @@ $tampil = $sql->fetch_assoc();
 $tahun2 = $tampil['tahun_terbit'];
 $lokasi = $tampil['lokasi'];
  ?>
+ <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=buku"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <div class="panel panel-default">
 <div class="panel-heading">
-  Edit Data Buku
+  <h1>Edit Data Buku</h1>
   </div>
 <div class="panel-body">
                            <div class="row">
