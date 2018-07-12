@@ -24,13 +24,13 @@
            </div> -->
 
           <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-           <a href="?page=laporan&aksi=btgl" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi Berdasarkan Tanggal<hr></a>
+           <a href="?page=laporan&aksi=btgl" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi (Tanggal)<hr></a>
           </div>
           <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-           <a href="?page=laporan&aksi=bsp" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi Berdasarkan Status Pinjam<hr></a>
+           <a href="?page=laporan&aksi=bsp" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi (Pinjam)<hr></a>
           </div>
           <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-           <a href="?page=laporan&aksi=bsk" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi Berdasarkan Status Kembali<hr></a>
+           <a href="?page=laporan&aksi=bsk" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi (Kembali)<hr></a>
           </div>
 
 

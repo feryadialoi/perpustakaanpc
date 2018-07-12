@@ -4,7 +4,7 @@
 <!-- menu dashboard start-->
 <hr>
 <div class="row">
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4 col-xl-4">
+  <div class="content-dash-item col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Anggota :</p>
       <p>
@@ -18,7 +18,7 @@
       <hr>
     </div>
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4 col-xl-4">
+  <div class="content-dash-item col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Judul Buku :</p>
       <p>
@@ -32,7 +32,7 @@
       <hr>
     </div>
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4 col-xl-4">
+  <div class="content-dash-item col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Total Buku :</p>
       <p>
@@ -47,7 +47,7 @@
       <hr>
     </div>
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4 col-xl-4">
+  <div class="content-dash-item col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Pengunjung 30 Hari Terakhir :</p>
       <p>
@@ -61,7 +61,7 @@
       <hr>
     </div>
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4 col-xl-4">
+  <div class="content-dash-item col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Buku Yang Dipinjam 30 Hari Terakhir :</p>
       <p>
@@ -75,7 +75,7 @@
       <hr>
     </div>
   </div>
-  <div class="content-dash-item col-sm-12 col-xs-12 col-md-12 col-lg-4 col-xl-4">
+  <div class="content-dash-item col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-4">
     <div class="dash-item col-sm-12 col-xs-12">
       <p>Jumlah Buku Yang Dikembalikan 30 Hari Terakhir :</p>
       <p>
