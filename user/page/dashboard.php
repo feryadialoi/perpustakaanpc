@@ -55,7 +55,7 @@
           $sql = "SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
           $result = mysqli_query($conn,$sql);
           $rows = mysqli_num_rows($result);
-          echo "<strong>".$rows." pengunjung</strong>";
+          echo "<strong>".$rows." orang</strong>";
         ?>
       </p>
       <hr>

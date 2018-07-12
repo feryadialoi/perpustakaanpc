@@ -22,7 +22,7 @@
   <!-- panel content start -->
   <div class="panel_">
     <div class="panel_heading">
-      <center><span class="login-title">Perpustakaan Pelita Cemerlang</span></center>
+      <center><span class="login-title">Perpustakaan Sekolah Pelita Cemerlang</span></center>
     </div>
     <div class="panel_body">
       <center><img src="./assets/img/logo.png" alt="logo" width="200px"></center>

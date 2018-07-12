@@ -236,17 +236,39 @@
   function toggleNav() {
     var x = document.getElementById("mySidenav");
     var y = document.getElementById("main");
+    if (y.style.marginLeft === "250px") {
+      // sidenav close
+      x.style.marginLeft = "-250px";
+      y.style.marginLeft = "0px";
+      console.log('1');
+    } else {
+      // sidenav open
+
+
+      x.style.marginLeft = "0px";
+      y.style.marginLeft = "250px";
+      console.log('2');
+      console.log(y.style.marginLeft);
+    }
+  }
+  </script>
+  <!-- <script>
+  function toggleNav() {
+    var x = document.getElementById("mySidenav");
+    var y = document.getElementById("main");
     if (y.style.marginLeft === "0px") {
       // sidenav close
       x.style.marginLeft = "0px";
       y.style.marginLeft = "250px";
+      console.log('1');
     } else {
       // sidenav open
       x.style.marginLeft = "-250px";
       y.style.marginLeft = "0px";
+      console.log('2');
     }
   }
-  </script>
+  </script> -->
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
