@@ -1,4 +1,21 @@
-
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {
+  background: #2455f4;
+  color: #fff;
+  /* border-radius: 10px; */
+  padding:40px;
+  text-align:center;
+  vertical-align:middle;
+}
+.button4:hover{
+  background: #1f41b5;
+  /* background: #f04405; */
+  color: #fff;
+  text-decoration: none;
+}
+.button5 {border-radius: 50%;}
 .login-title{
   color:white;
 }
@@ -331,7 +348,7 @@ a .page-link{
   padding-right: 16px;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   color: #fff;
 }
 .content-dash-item{

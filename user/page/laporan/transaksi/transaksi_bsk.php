@@ -1,6 +1,7 @@
 <?php include '../function.php'; ?>
 <!-- transaksi status kembali Bulanan -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=laporan&aksi=transaksi"><i class="material-icons md-18">chevron_left</i> Kembali</a>
+<!-- <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=laporan&aksi=transaksi"><i class="material-icons md-18">chevron_left</i> Kembali</a> -->
+<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=laporan"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 
 <div class="row">
 <div class="col-md-12">

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*BLOCK FUNCTION EXCELL*/
 function cleanDataExcel(&$str){
@@ -16,7 +16,7 @@ function createExcel($filename,$array){
     // filename for download
     $filename = $filename.".xls";
     header("Content-Disposition: attachment; filename=\"$filename\"");
-    header("Content-Type: application/vnd.ms-excel");    
+    header("Content-Type: application/vnd.ms-excel");
     $flag = false;
     foreach($array as $row) {
         if(!$flag) {
@@ -47,7 +47,7 @@ while($row=mysqli_fetch_array($result)){
         "Jenis Kelamin"=>$jka,
 		"Tingkat"=>$row['tingkat']
 
-    );    
+    );
 }
 /*END BLOCK FUNCTION SQL*/
 
