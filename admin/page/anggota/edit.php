@@ -24,27 +24,27 @@ $tingkat_A=$tampil['tingkat'];
                                       <form id="formEditAnggota" method="POST">
                                           <div class="form-group">
                                               <label>Nomor Induk Siswa</label>
-                                              <input class="form-control" name="nis"value="<?php echo $tampil['nis'];  ?>"readonly/>
+                                              <input id="nis_edit_anggota"class="form-control" name="nis"value="<?php echo $tampil['nis'];  ?>"readonly/>
 
                                           </div>
                                           <div class="form-group">
                                               <label>Nama</label>
-                                              <input class="form-control" name="nama" value="<?php echo $tampil['nama'];  ?>"/>
+                                              <input id="nama_edit_anggota"class="form-control" name="nama" value="<?php echo $tampil['nama'];  ?>"/>
 
                                           </div>
                                           <div class="form-group">
                                               <label>Tempat Lahir</label>
-                                              <input class="form-control" name="tmp_lahir" value="<?php echo $tampil['tmp_lahir'];  ?>"/>
+                                              <input id="tmp_lahir_edit_anggota" class="form-control" name="tmp_lahir" value="<?php echo $tampil['tmp_lahir'];  ?>"/>
 
                                           </div>
                                           <div class="form-group">
                                                <label>Tanggal Lahir</label>
-                                               <input class="form-control" name="tgl_lahir" type="date" value="<?php echo $tampil['tgl_lahir'];  ?>"/>
+                                               <input id="tgl_lahir_edit_anggota" class="form-control" name="tgl_lahir" type="date" value="<?php echo $tampil['tgl_lahir'];  ?>"/>
                                                </select>
                                            </div>
                                            <div class="form-group">
                                                 <label>Jenis Kelamin</label>
-                                                <select class="form-control" name="jk">
+                                                <select id="jk_edit_anggota" class="form-control" name="jk">
                                                     <option value="l"<?php if ($jk_A== 'l') {echo "selected";}?>>Laki - Laki</option>
                                                     <option value="p"<?php if ($jk_A== 'p') {echo "selected";}?>>Perempuan</option>
                                                 </select>
@@ -53,7 +53,7 @@ $tingkat_A=$tampil['tingkat'];
 
                                             <div class="form-group">
                                                  <label>Tingkat</label>
-                                                 <select class="form-control" name="tingkat">
+                                                 <select id="tingkat_edit_anggota" class="form-control" name="tingkat">
                                                      <option value="TK/PG"<?php if ($tingkat_A== 'TK/PG') {echo "selected";}?>>TK/PG</option>
                                                      <option value="SD"<?php if ($tingkat_A== 'SD') {echo "selected";}?>>SD</option>
                                                      <option value="SMP"<?php if ($tingkat_A== 'SMP') {echo "selected";}?>>SMP</option>
@@ -63,7 +63,7 @@ $tingkat_A=$tampil['tingkat'];
                                              </div>
                                             <div>
                                               <!-- <input type="submit" name="simpan" value="Simpan" class="btn btn-primary"> -->
-                                              <button type="submit" name="simpan" form="formEditAnggota" value="submit" class="simpan_data_anggota btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
+                                              <button type="submit" name="simpan" form="formEditAnggota" value="submit" class="simpan_edit_anggota btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
                                             </div>
                                           </div>
                                         </form>
@@ -72,38 +72,31 @@ $tingkat_A=$tampil['tingkat'];
  </div>
  </div>
 
- <!-- entah kenapa tanggal inputnya tidak berjalan -->
- <!-- problem solved tanggal bisa berjalan -->
- <!-- sebelumnya gk jalan coz lupa tanda petik ('') wakwkwkkwkwkwk -->
- <?php
-  $nis = $_POST['nis'];
-  $nama = $_POST['nama'];
-  $tmp_lahir = $_POST['tmp_lahir'];
-  $tgl_lahir = $_POST['tgl_lahir'];
-  $jk = $_POST['jk'];
-  $tingkat = $_POST['tingkat'];
-  $simpan = $_POST['simpan'];
-   if($simpan){
-     $sql = $conn->query("update tb_anggota set nis='$nis',nama='$nama',tmp_lahir='$tmp_lahir',tgl_lahir='$tgl_lahir',jk='$jk',tingkat='$tingkat' where nis='$nis'");
+<!-- <script type="text/javascript">
+  $(document).ready(function () {
+    $('.simpan_data_anggota').click(function () {
+      event.preventDefault():
 
-    if($sql){
-  ?>
-      <script type="text/javascript">
+      var pnis = document.getElementById('nis_edit_anggota').value;
+      var pnama = document.getElementById('nama_edit_anggota').value
+      var ptmp_lahir = document.getElementById('tmp_lahir_edit_anggota').value
+      var ptgl_lahir = document.getElementById('tgl_lahir_edit_anggota').value
+      var pjk = document.getElementById('jk__edit_anggota').value
+      var ptingkat = document.getElementById('tingkat_edit_anggota').value
 
-      alert("Data Berhasil Disimpan!");
-      // lempar ke anggota.php
-      window.location.href="?page=anggota";
-      </script>
-
-
-
-
-
-
-
-      <?php
-    }
-  }
-
-
-  ?>
+      $.ajax({
+        type: 'POST',
+        // url: '../hapusAnggota.php',
+        url: './page/buku/simpan.edit.php',
+        data: {
+          'nis': pnis,
+          'nama': pnama,
+          'tmp_lahir': ptmp_lahir,
+          'tgl_lahir': ptgl_lahir,
+          'jk': pjk,
+          'tingkat': ptingkat
+        }
+      });
+    });
+  });
+</script> -->

@@ -103,7 +103,9 @@
           // output data of each row
           while($row = mysqli_fetch_assoc($result)) {
             // echo "id: " . $row["id"]. " - Name: " . $row["nama"]."<br>";
-            echo $row['nama'];
+            // echo $row['nama'];
+            $_SESSION['nama'] = $row['nama'];
+            echo $_SESSION['nama'];
           }
         }
 
@@ -365,158 +367,9 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
 
-<!-- ajax hapus anggota bootstrap modal -->
-<script>
-	$(document).ready(function(){
+<script src="../assets/js/modal.js"></script>
 
-		$('.hapus_data_anggota').click(function(e){
-
-			e.preventDefault();
-
-			var pid = $(this).attr('data-id');
-			var parent = $(this).parent("td").parent("tr");
-
-			bootbox.dialog({
-			  message: "Anda yakin ingin menghapus?",
-			  title: "<i class='material-icons'>delete</i> Hapus",
-			  buttons: {
-				danger: {
-				  label: "Hapus",
-				  className: "btn-danger",
-				  callback: function() {
-
-            $.ajax({
-						  type: 'POST',
-						  // url: '../hapusAnggota.php',
-						  url: './page/anggota/hapus.php',
-              data: {
-                'id': pid
-              }
-					  })
-					  .done(function(response){
-						  bootbox.alert(response);
-						  parent.fadeOut('slow');
-					  })
-					  .fail(function(){
-						  bootbox.alert('Ada yang salah...');
-					  })
-				  }
-				},
-        success: {
-				  label: "Batal",
-				  className: "btn-primary",
-				  callback: function() {
-					 $('.bootbox').modal('hide');
-				  }
-				}
-			  }
-			});
-		});
-	});
-</script>
-
-<!-- ajax hapus buku bootstrap modal -->
-<script>
-	$(document).ready(function(){
-
-		$('.hapus_data_buku').click(function(e){
-
-			e.preventDefault();
-
-			var pid = $(this).attr('data-id');
-			var parent = $(this).parent("td").parent("tr");
-
-			bootbox.dialog({
-			  message: "Anda yakin ingin menghapus?",
-			  title: "<i class='material-icons'>delete</i> Hapus",
-			  buttons: {
-				danger: {
-				  label: "Hapus",
-				  className: "btn-danger",
-				  callback: function() {
-
-            $.ajax({
-						  type: 'POST',
-						  // url: '../hapusAnggota.php',
-						  url: './page/buku/hapus.php',
-              data: {
-                'id': pid
-              }
-					  })
-					  .done(function(response){
-						  bootbox.alert(response);
-						  parent.fadeOut('slow');
-					  })
-					  .fail(function(){
-						  bootbox.alert('Ada yang salah...');
-					  })
-				  }
-				},
-        success: {
-				  label: "Batal",
-				  className: "btn-primary",
-				  callback: function() {
-					 $('.bootbox').modal('hide');
-				  }
-				}
-			  }
-			});
-		});
-	});
-</script>
-
-
-<!-- <script>
-	$(document).ready(function(){
-
-		$('.simpan_data_anggota').click(function(e){
-
-			e.preventDefault();
-
-			var pid = $(this).attr('data-id');
-			var parent = $(this).parent("td").parent("tr");
-
-			bootbox.dialog({
-			  message: "Anda yakin ingin Menyimpan?",
-			  title: "<i class='glyphicon glyphicon-trash'></i> Simpan!",
-			  buttons: {
-				success: {
-				  label: "Batal",
-				  className: "btn-success",
-				  callback: function() {
-					 $('.bootbox').modal('hide');
-				  }
-				},
-				danger: {
-				  label: "Hapus!",
-				  className: "btn-danger",
-				  callback: function() {
-
-            $.ajax({
-						  type: 'POST',
-						  // url: '../hapusAnggota.php',
-						  url: './page/anggota/edit.php',
-              data: {
-                'id': pid,
-
-              }
-					  })
-					  .done(function(response){
-						  bootbox.alert(response);
-						  parent.fadeOut('slow');
-					  })
-					  .fail(function(){
-						  bootbox.alert('Ada yang salah...');
-					  })
-				  }
-				}
-			  }
-			});
-		});
-	});
-</script> -->
-
-
+<!-- jquery datatable -->
 <script type="text/javascript">
   $(document).ready( function () {
     $('#myTable').DataTable();

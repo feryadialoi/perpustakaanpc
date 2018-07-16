@@ -18,22 +18,22 @@ $lokasi = $tampil['lokasi'];
                                    <form method="POST" id="formEditBuku">
                                        <div class="form-group">
                                            <label>Judul Buku</label>
-                                           <input class="form-control" name="judul" value="<?php echo $tampil['judul'];  ?>"/>
+                                           <input id="judul_edit_buku" class="form-control" name="judul" value="<?php echo $tampil['judul'];  ?>"/>
 
                                        </div>
                                        <div class="form-group">
                                            <label>Pengarang</label>
-                                           <input class="form-control" name="pengarang" value="<?php echo $tampil['pengarang'];?>"/>
+                                           <input id="pengarang_edit_buku" class="form-control" name="pengarang" value="<?php echo $tampil['pengarang'];?>"/>
 
                                        </div>
                                        <div class="form-group">
                                            <label>Penerbit</label>
-                                           <input class="form-control" name="penerbit" value="<?php echo $tampil['penerbit'];?>"/>
+                                           <input id="penerbit_edit_buku" class="form-control" name="penerbit" value="<?php echo $tampil['penerbit'];?>"/>
 
                                        </div>
                                        <div class="form-group">
                                             <label>Tahun Terbit</label>
-                                            <select class="form-control" name="tahun_Terbit">
+                                            <select id="tahun_terbit_edit_buku" class="form-control" name="tahun_Terbit">
                                               <?php
                                                   $tahun =date("Y");
 
@@ -45,8 +45,6 @@ $lokasi = $tampil['lokasi'];
                                                     }else{
                                                       echo'  <option value="'.$i.'">'.$i.'</option>';
                                                       }
-
-                                                  //  ';
                                                   }
 
                                               ?>
@@ -54,17 +52,17 @@ $lokasi = $tampil['lokasi'];
                                         </div>
                                         <div class="form-group">
                                             <label>ISBN</label>
-                                            <input class="form-control" name="isbn"/ value="<?php echo $tampil['isbn'];?>">
+                                            <input id="isbn_edit_buku" class="form-control" name="isbn" value="<?php echo $tampil['isbn'];?>">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Jumlah Buku</label>
-                                            <input class="form-control" name="jumlah_Buku"/ value="<?php echo $tampil['jumlah_buku'];?>">
+                                            <input id="jumlah_buku_edit_buku" class="form-control" name="jumlah_Buku"/ value="<?php echo $tampil['jumlah_buku'];?>">
 
                                         </div>
                                         <div class="form-group">
                                              <label>Lokasi Buku</label>
-                                             <select class="form-control" name="lokasi">
+                                             <select id="lokasi_edit_buku" class="form-control" name="lokasi">
                                                  <option value="rak1"<?php if ($lokasi== 'rak1') {echo "selected";}?>>Rak 1</option>
                                                  <option value="rak2"<?php if ($lokasi== 'rak2') {echo "selected";}?>>Rak 2</option>
                                                  <option value="rak3"<?php if ($lokasi== 'rak3') {echo "selected";}?>>Rak 3</option>
@@ -79,11 +77,11 @@ $lokasi = $tampil['lokasi'];
                                          </div>
                                          <div class="form-group">
                                              <label>Tanggal Input</label>
-                                             <input class="form-control" name="tgl_Input" type="date" value="<?php echo $tampil['tgl_input'];?>"/>
+                                             <input id="tgl_input_edit_buku" class="form-control" name="tgl_Input" type="date" value="<?php echo $tampil['tgl_input'];?>"/>
 
                                          </div>
                                          <div>
-                                           <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                                           <button type="submit" name="simpan" form="formEditBuku" value="submit" class="simpan_edit_buku btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
                                          </div>
                                        </div>
                                      </form>
@@ -91,33 +89,3 @@ $lokasi = $tampil['lokasi'];
 </div>
 </div>
 </div>
-
-<!-- entah kenapa tanggal inputnya tidak berjalan -->
-<!-- problem solved tanggal bisa berjalan -->
-<!-- sebelumnya gk jalan coz lupa tanda petik ('') wakwkwkkwkwkwk -->
-<?php
- $judul = $_POST['judul'];
- $pengarang = $_POST['pengarang'];
- $penerbit = $_POST['penerbit'];
- $tahun_Terbit = $_POST['tahun_Terbit'];
- $isbn = $_POST['isbn'];
- $jumlah_buku = $_POST['jumlah_Buku'];
- $lokasi = $_POST['lokasi'];
- $tgl_Input = $_POST['tgl_Input'];
- $simpan = $_POST['simpan'];
- if($simpan){
-   $sql = $conn->query("update tb_buku set judul='$judul', pengarang='$pengarang', penerbit='$penerbit', tahun_terbit='$tahun',
-                          isbn='$isbn', jumlah_buku='$jumlah_buku', lokasi='$lokasi', tgl_input ='$tgl_Input' where id='$id'");
-   if($sql){
- ?>
-     <script type="text/javascript">
-     alert("Perubahan Data Berhasil Disimpan!")
-     // lempar ke buku.php
-     window.location.href="?page=buku";
-     </script>
-     <?php
-   }
- }
-
-
- ?>
