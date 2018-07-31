@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost','root','','perpustakaan');
+$conn = mysqli_connect('localhost','root','','db_perpustakaanpc');
  $nis = $_REQUEST['nis'];
  $nama = $_REQUEST['nama'];
  $tmp_lahir = $_REQUEST['tmp_lahir'];

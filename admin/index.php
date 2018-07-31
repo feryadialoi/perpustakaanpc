@@ -94,16 +94,13 @@
       <?php
         include '../koneksi.php';
         // session_start();
-          $username = $_SESSION['username'];
+        $username = $_SESSION['username'];
 
-        mysqli_select_db($conn,'perpustakaan');
-        $result = mysqli_query($conn,"SELECT * FROM tbuser WHERE username = '$username'");
+        $result = mysqli_query($conn,"SELECT * FROM tb_user WHERE username = '$username'");
 
         if (mysqli_num_rows($result) > 0) {
           // output data of each row
           while($row = mysqli_fetch_assoc($result)) {
-            // echo "id: " . $row["id"]. " - Name: " . $row["nama"]."<br>";
-            // echo $row['nama'];
             $_SESSION['nama'] = $row['nama'];
             echo $_SESSION['nama'];
           }
@@ -126,7 +123,7 @@
     <a class="<?php if($_GET['page'] == ''){ echo ' active';}?>" href="index.php"><i class="material-icons">dashboard</i> Dashboard</a>
     <a class="<?php if($_GET['page'] == 'anggota'){ echo ' active';}?>" href="?page=anggota"><i class="material-icons">account_box</i> Anggota</a>
     <a class="<?php if($_GET['page'] == 'buku'){ echo ' active';}?>" href="?page=buku"><i class="material-icons">book</i> Buku</a>
-    <a class="<?php if($_GET['page'] == 'transaksi'){ echo ' active';}?>" href="?page=transaksi"><i class="material-icons">event_note</i> Transaksi</a>
+    <a class="<?php if($_GET['page'] == 'peminjaman'){ echo ' active';}?>" href="?page=peminjaman"><i class="material-icons">event_note</i> Peminjaman</a>
     <a class="<?php if($_GET['page'] == 'laporan'){ echo ' active';}?>" href="?page=laporan"><i class="material-icons">perm_device_information</i> Laporan</a>
     <!-- <a href="?page=pengaturan"><i class="material-icons">settings</i> Pengaturan</a> -->
     <!-- menu sidenav end -->
@@ -183,20 +180,20 @@
               }
             }
             // page transaksi: tambah
-            elseif($page == "transaksi"){
+            elseif($page == "peminjaman"){
               if (isset($_GET['aksi'])){
                 if ($aksi=="tambah"){
-                  include "./page/transaksi/tambah.php";
+                  include "./page/peminjaman/tambah.php";
                 }
                 elseif ($aksi=="kembali"){
-                  include "./page/transaksi/kembali.php";
+                  include "./page/peminjaman/kembali.php";
                 }
                 elseif ($aksi=="perpanjang"){
-                  include "./page/transaksi/perpanjang.php";
+                  include "./page/peminjaman/perpanjang.php";
                 }
               }
               else {
-                include "./page/transaksi/transaksi.php";
+                include "./page/peminjaman/peminjaman.php";
               }
             }
             // page laporan:

@@ -9,7 +9,7 @@ $html = '
 <body style="font-family:arial;">
 <H2 align="center">Sekolah Pelita Cemerlang</H2>
 <p align="center"><strong>Jl. Perdana no. 18 Pontianak Tenggara<br>
-Laporan Data Transaksi Berstatus Kembali</strong></p>
+Laporan Peminjaman Berstatus Kembali</strong></p>
 <table width="100%" border="1" cellspacing="0" cellpadding="5">
   <thead>
     <tr>
@@ -26,8 +26,8 @@ Laporan Data Transaksi Berstatus Kembali</strong></p>
   <tbody>'.
 
   $no = 1;
-  // $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status = 'pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
-     $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+  // $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE status = 'pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+     $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
   while ($data= $sql-> fetch_assoc()){
     $html .=
     '<tr>

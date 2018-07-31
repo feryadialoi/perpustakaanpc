@@ -13,11 +13,13 @@
               <thead>
                 <tr>
                   <th>No</th>
+                  <th>ISBN(Kode Buku)</th>
                   <th>Judul</th>
                   <th>Pengarang(s)</th>
                   <th>Penerbit</th>
-                  <th>ISBN(Kode Buku)</th>
+                  <th>Tahun Terbit</th>
                   <th>Jumlah Buku</th>
+                  <th>Lokasi</th>
                   <th>Aksi </th>
                 </tr>
               </thead>
@@ -30,24 +32,18 @@
                   ?>
                   <tr>
                     <td><?php echo $no++; ?></td>
+                    <td><?php echo $data['isbn'];?></td>
                     <td><?php echo $data['judul'];?></td>
                     <td><?php echo $data['pengarang'];?></td>
                     <td><?php echo $data['penerbit'];?></td>
-                    <td><?php echo $data['isbn'];?></td>
+                    <td><?php echo $data['tahun_terbit'];?></td>
                     <td><?php echo $data['jumlah_buku'];?></td>
+                    <td><?php echo $data['lokasi'];?></td>
                     <td>
-                      <a href="?page=buku&aksi=edit&id=<?php echo $data['id'];?>" class="btn btn-primary"><i class="material-icons md-18">edit</i> Edit</a>
-                      <!-- <button class="btn btn-danger" onclick="document.getElementById('modalHapusBuku').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-                      <!-- default -->
-                      <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Buku Berikut?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id'];?>" class="btn btn-danger"><i class="material-icons md-18">delete</i> Delete</a> -->
-
-                      <!-- testing -->
-                      <a class="btn btn-danger hapus_data_buku" data-id="<?php echo $data['id']; ?>" href="javascript:void(0)"><i class="material-icons md-18">delete</i> Hapus</a>
-
+                      <a href="?page=buku&aksi=edit&isbn=<?php echo $data['isbn'];?>" class="btn btn-primary"><i class="material-icons md-18">edit</i> Edit</a>
+                      <a class="btn btn-danger hapus_data_buku" data-id="<?php echo $data['isbn']; ?>" href="javascript:void(0)"><i class="material-icons md-18">delete</i> Hapus</a>
                     </td>
                   </tr>
-
-
                   <?php } ?>
                 </tbody>
               </table>

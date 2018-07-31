@@ -7,7 +7,7 @@
 <div class="col-md-12">
 <div class="panel panel-default">
   <div class="panel-heading">
-     <h1>Data Transaksi dalam 30 hari</h1>
+     <h1>Laporan Peminjaman Dalam 30 Hari</h1>
    </div>
    <div class="panel-body">
     <div class="table-responsive">
@@ -30,8 +30,8 @@
 
             <?php
             $no = 1;
-            // $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status = 'kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
-            $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+            // $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE status = 'kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+            $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>

@@ -1,9 +1,9 @@
 
  <?php
-  $conn = mysqli_connect('localhost','root','','perpustakaan');
-  $id = $_GET['id'];
+  $conn = mysqli_connect('localhost','root','','db_perpustakaanpc');
+  $id = $_GET['isbn'];
   // $conn->query("DELETE FROM tb_buku where id ='$id'");
-  $conn->query("DELETE FROM tb_buku where id ='".mysqli_escape_string($conn, $_POST['id'])."'");
+  $conn->query("DELETE FROM tb_buku where isbn ='".mysqli_escape_string($conn, $_POST['isbn'])."'");
  ?>
 
  <!-- <script type="text/javascript">

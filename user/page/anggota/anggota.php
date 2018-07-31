@@ -8,7 +8,11 @@
           </div>
           <div class="panel-body">
               <div class="table-responsive" id="container-table-anggota">
-                  <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                  <!-- <table class="table table-striped table-bordered table-hover" id="dataTables-example"> -->
+                  <form class="" action="" method="post">
+
+
+                  <table class="table table-striped table-bordered table-hover" id="myTable">
                       <thead>
                           <tr>
                               <th>No</th>
@@ -28,10 +32,13 @@
                         $no = 1;
                         // $query = "SELECT * FROM tb_anggota WHERE nis LIKE '%o%' OR nama LIKE '%o%' OR tmp_lahir LIKE '%o%' OR tgl_lahir LIKE '%o%' OR jk LIKE '%o%' OR tingkat LIKE '%o%'";
                         $query = "SELECT * FROM tb_anggota";
-                        // $sql = $conn -> query("select*from tb_anggota");
+                        // $sql = $koneksi -> query("select*from tb_anggota");
                         $sql = $conn -> query($query);
                         while ($data= $sql-> fetch_assoc()){
                         $jk = ($data['jk']=='l')?"Laki - Laki":"Perempuan";
+
+
+                        $power_id{$no} = $data['nis'];
                         ?>
 
                         <tr>
@@ -44,9 +51,8 @@
                           <td><?php echo $data['tingkat'];?></td>
                           <!-- <td> -->
                             <!-- <div class="Aksi"> -->
-                              <!-- <a href="?page=anggota&aksi=edit&id=<?php //echo $data['nis'];?>" class="btn btn-primary"><i class="material-icons md-18">edit</i> Edit</a>
-                              <button class="btn btn-danger" onclick="document.getElementById('modalHapusAnggota').style.display='block'" ><i class="material-icons md-18">delete</i> Delete</button> -->
-                              <!-- <a onclick="return confirm('Anda Yakin Ingin Menghapus Data Anggota Berikut?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger">Delete</a> -->
+                              <!-- <a href="?page=anggota&aksi=edit&nis=<?php echo $data['nis'];?>" class="btn btn-primary"><i class="material-icons md-18">edit</i> Edit</a>
+                              <a class="btn btn-danger hapus_data_anggota" data-id="<?php echo $data['nis']; ?>" href="javascript:void(0)"><i class="material-icons md-18">delete</i> Hapus</a> -->
                           <!-- </div> -->
                           </td>
                         </tr>
@@ -54,42 +60,15 @@
                       <?php } ?>
                       </tbody>
                     </table>
+                    </form>
+                    <?php
+                      if (isset($_POST['btn_hapus'])) {
+                        $_SESSION['power_id'] = $power_id{$no};
+                      }
+                    ?>
             </div>
       </div>
     </div>
   </div>
 </div>
 <!-- <script src="../assets/js/ajax/ajaxAnggota.js"></script> -->
-<div id="modalHapusAnggota" class="modal">
-  <div class="modal-content animate" action="/action_page.php">
-    <div class="head">
-      <span onclick="document.getElementById('modalHapusAnggota').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <h2>Hapus Anggota</h2>
-      <p>
-        Anda Yakin Ingin Menghapus Data Anggota Berikut?
-        <br>
-        <br>
-      </p>
-    </div>
-
-    <div class="container-modal">
-      <!-- <div class="logout-btn"> -->
-      <div class="logout-btn2">
-        <?php
-        $no = 1;
-        // $query = "SELECT * FROM tb_anggota WHERE nis LIKE '%o%' OR nama LIKE '%o%' OR tmp_lahir LIKE '%o%' OR tgl_lahir LIKE '%o%' OR jk LIKE '%o%' OR tingkat LIKE '%o%'";
-        $query = "SELECT * FROM tb_anggota";
-        // $sql = $conn -> query("select*from tb_anggota");
-        $sql = $conn -> query($query);
-        $data= $sql-> fetch_assoc();
-        ?>
-        <a href="?page=anggota&aksi=hapus&id=<?php echo $data['nis'];?>" class="btn btn-danger modalawidth">Ya</a>
-        <button type="button" onclick="document.getElementById('modalHapusAnggota').style.display='none'" class="btn btn-primary modalbtnwidth">Tidak</button>
-      </div>
-      <!-- </div> -->
-    </div>
-  </div>
-</div>

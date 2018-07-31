@@ -5,11 +5,11 @@
 hapus -->
 <?php
 // include '../koneksi.php';
-  $conn = mysqli_connect('localhost','root','','perpustakaan');
-  $nis = $_REQUEST['id'];
+  $conn = mysqli_connect('localhost','root','','db_perpustakaanpc');
+  $nis = $_REQUEST['nis'];
   // $nis = $_GET['id'];
   // $conn->query("delete from tb_anggota where nis ='$nis'");
-  $conn->query("DELETE FROM tb_anggota WHERE nis ='".mysqli_escape_string($conn, $_POST['id'])."'");
+  $conn->query("DELETE FROM tb_anggota WHERE nis ='".mysqli_escape_string($conn, $_POST['nis'])."'");
 ?>
 
 <!-- <script type="text/javascript">

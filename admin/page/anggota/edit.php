@@ -4,7 +4,7 @@
 <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=anggota"><i class="material-icons md-18">chevron_left</i> Kembali</a>
 <?php
 
-$nis= $_GET['id'];
+$nis= $_GET['nis'];
 $sql = $conn->query("select * from tb_anggota where nis='$nis'");
 
 $tampil = $sql->fetch_assoc();

@@ -4,7 +4,7 @@
        <!-- Table data buku -->
        <div class="panel panel-default">
            <div class="panel-heading">
-   <h1>Cetak Laporan Transaksi</h1>
+   <h1>Cetak Laporan Peminjaman</h1>
            </div>
 
            <div class="panel-body">
@@ -20,17 +20,17 @@
           </div>
 
            <!-- <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
-             <a style="padding:40px;" href="?page=laporan&aksi=transaksi" class="col-sm-12 col-xs-12 btn btn-primary" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi</a>
+             <a style="padding:40px;" href="?page=laporan&aksi=Peminjaman" class="col-sm-12 col-xs-12 btn btn-primary" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Peminjaman</a>
            </div> -->
 
           <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-           <a href="?page=laporan&aksi=btgl" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi (Tanggal)<hr></a>
+           <a href="?page=laporan&aksi=btgl" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Peminjaman (Tanggal)<hr></a>
           </div>
           <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-           <a href="?page=laporan&aksi=bsp" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi (Pinjam)<hr></a>
+           <a href="?page=laporan&aksi=bsp" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Peminjaman (Pinjam)<hr></a>
           </div>
           <div class="content-dash-item col-sm-12 col-xs-12 col-md-6 col-lg-4">
-           <a href="?page=laporan&aksi=bsk" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Transaksi (Kembali)<hr></a>
+           <a href="?page=laporan&aksi=bsk" class="button4 col-sm-12 col-xs-12" style="margin-bottom: 1px"><i class="material-icons ">book</i> Laporan Peminjaman (Kembali)<hr></a>
           </div>
 
 

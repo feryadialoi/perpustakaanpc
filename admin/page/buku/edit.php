@@ -1,5 +1,6 @@
-<?php $id= $_GET['id'];
-$sql = $conn->query("select * from tb_buku where id='$id'");
+<?php
+$isbn= $_GET['isbn'];
+$sql = $conn->query("select * from tb_buku where isbn='$isbn'");
 
 $tampil = $sql->fetch_assoc();
 
@@ -17,19 +18,20 @@ $lokasi = $tampil['lokasi'];
 
                                    <form method="POST" id="formEditBuku">
                                        <div class="form-group">
+                                           <label>ISBN</label>
+                                           <input id="isbn_edit_buku" class="form-control" name="isbn" value="<?php echo $tampil['isbn'];?>">
+                                       </div>
+                                       <div class="form-group">
                                            <label>Judul Buku</label>
                                            <input id="judul_edit_buku" class="form-control" name="judul" value="<?php echo $tampil['judul'];  ?>"/>
-
                                        </div>
                                        <div class="form-group">
                                            <label>Pengarang</label>
                                            <input id="pengarang_edit_buku" class="form-control" name="pengarang" value="<?php echo $tampil['pengarang'];?>"/>
-
                                        </div>
                                        <div class="form-group">
                                            <label>Penerbit</label>
                                            <input id="penerbit_edit_buku" class="form-control" name="penerbit" value="<?php echo $tampil['penerbit'];?>"/>
-
                                        </div>
                                        <div class="form-group">
                                             <label>Tahun Terbit</label>
@@ -46,19 +48,12 @@ $lokasi = $tampil['lokasi'];
                                                       echo'  <option value="'.$i.'">'.$i.'</option>';
                                                       }
                                                   }
-
                                               ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>ISBN</label>
-                                            <input id="isbn_edit_buku" class="form-control" name="isbn" value="<?php echo $tampil['isbn'];?>">
-
-                                        </div>
-                                        <div class="form-group">
                                             <label>Jumlah Buku</label>
                                             <input id="jumlah_buku_edit_buku" class="form-control" name="jumlah_Buku"/ value="<?php echo $tampil['jumlah_buku'];?>">
-
                                         </div>
                                         <div class="form-group">
                                              <label>Lokasi Buku</label>
@@ -75,11 +70,10 @@ $lokasi = $tampil['lokasi'];
                                                  <option value="rak10"<?php if ($lokasi== 'rak10') {echo "selected";}?>>Rak 10</option>
                                              </select>
                                          </div>
-                                         <div class="form-group">
+                                         <!-- <div class="form-group">
                                              <label>Tanggal Input</label>
-                                             <input id="tgl_input_edit_buku" class="form-control" name="tgl_Input" type="date" value="<?php echo $tampil['tgl_input'];?>"/>
-
-                                         </div>
+                                             <input id="tgl_input_edit_buku" class="form-control" name="tgl_Input" type="date" value="<?php //echo $tampil['tgl_input'];?>"/>
+                                         </div> -->
                                          <div>
                                            <button type="submit" name="simpan" form="formEditBuku" value="submit" class="simpan_edit_buku btn btn-primary"><i class="material-icons md-18">save</i> Simpan</button>
                                          </div>

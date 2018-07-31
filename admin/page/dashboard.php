@@ -52,7 +52,7 @@
       <p>Jumlah Pengunjung 30 Hari Terakhir :</p>
       <p>
         <?php
-          $sql = "SELECT * FROM tb_transaksi WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
+          $sql = "SELECT * FROM tb_peminjaman WHERE tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
           $result = mysqli_query($conn,$sql);
           $rows = mysqli_num_rows($result);
           echo "<strong>".$rows." orang</strong>";
@@ -66,7 +66,7 @@
       <p>Jumlah Buku Yang Dipinjam 30 Hari Terakhir :</p>
       <p>
         <?php
-          $sql = "SELECT * FROM tb_transaksi WHERE status='pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
+          $sql = "SELECT * FROM tb_peminjaman WHERE status='pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
           $result = mysqli_query($conn,$sql);
           $rows = mysqli_num_rows($result);
           echo "<strong>".$rows." buku</strong>";
@@ -80,7 +80,7 @@
       <p>Jumlah Buku Yang Dikembalikan 30 Hari Terakhir :</p>
       <p>
         <?php
-          $sql = "SELECT * FROM tb_transaksi WHERE status='kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
+          $sql = "SELECT * FROM tb_peminjaman WHERE status='kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()";
           $result = mysqli_query($conn,$sql);
           $rows = mysqli_num_rows($result);
           echo "<strong>".$rows." buku</strong>";
@@ -122,7 +122,7 @@
 
             <?php
             $no = 1;
-            $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status='pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+            $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE status='pinjam' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>
@@ -186,7 +186,7 @@
 
             <?php
             $no = 1;
-            $sql = $conn -> query("SELECT * FROM tb_transaksi WHERE status='kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
+            $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE status='kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>

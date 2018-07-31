@@ -6,7 +6,7 @@
 
 			e.preventDefault();
 
-			var pid = $(this).attr('data-id');
+			var pnis = $(this).attr('data-id');
 			var parent = $(this).parent("td").parent("tr");
 
 			bootbox.dialog({
@@ -23,7 +23,7 @@
 						  // url: '../hapusAnggota.php',
 						  url: './page/anggota/hapus.php',
               data: {
-                'id': pid
+                'nis': pnis
               }
 					  })
 					  .done(function(response){
@@ -56,7 +56,7 @@
 
 			e.preventDefault();
 
-			var pid = $(this).attr('data-id');
+			var pisbn = $(this).attr('data-id');
 			var parent = $(this).parent("td").parent("tr");
 
 			bootbox.dialog({
@@ -73,7 +73,7 @@
 						  // url: '../hapusAnggota.php',
 						  url: './page/buku/hapus.php',
               data: {
-                'id': pid
+                'isbn': pisbn
               }
 					  })
 					  .done(function(response){
@@ -193,31 +193,27 @@
   $(document).ready(function () {
     $('.simpan_edit_buku').click(function () {
       event.preventDefault();
-      var pid = "<?php echo $id; ?>";
+			var pisbn = document.getElementById('isbn_edit_buku').value;
       var pjudul = document.getElementById('judul_edit_buku').value;
       var ppengarang = document.getElementById('pengarang_edit_buku').value;
       var ppenerbit = document.getElementById('penerbit_edit_buku').value;
       var ptahun_terbit = document.getElementById('tahun_terbit_edit_buku').value;
-      var pisbn = document.getElementById('isbn_edit_buku').value;
       var pjumlah_buku = document.getElementById('jumlah_buku_edit_buku').value;
       var plokasi = document.getElementById('lokasi_edit_buku').value;
-      var ptgl_input = document.getElementById('tgl_input_edit_buku').value;
-      // alert(pid);
+      // alert(pisbn);
 
       $.ajax({
         type: 'POST',
         // url: '../hapusAnggota.php',
         url: './page/buku/simpan_edit.php',
         data: {
-          'id': pid,
+					'isbn': pisbn,
           'judul': pjudul,
           'pengarang': ppengarang,
           'penerbit': ppenerbit,
           'tahun_terbit': ptahun_terbit,
-          'isbn': pisbn,
           'jumlah_buku': pjumlah_buku,
-          'lokasi': plokasi,
-          'tgl_input': ptgl_input
+          'lokasi': plokasi
         }
       });
 
@@ -245,31 +241,27 @@
   $(document).ready(function () {
     $('.simpan_tambah_buku').click(function () {
       event.preventDefault();
-      var pid = "<?php echo $id; ?>";
+			var pisbn = document.getElementById('isbn_tambah_buku').value;
       var pjudul = document.getElementById('judul_tambah_buku').value;
       var ppengarang = document.getElementById('pengarang_tambah_buku').value;
       var ppenerbit = document.getElementById('penerbit_tambah_buku').value;
       var ptahun_terbit = document.getElementById('tahun_terbit_tambah_buku').value;
-      var pisbn = document.getElementById('isbn_tambah_buku').value;
       var pjumlah_buku = document.getElementById('jumlah_buku_tambah_buku').value;
       var plokasi = document.getElementById('lokasi_tambah_buku').value;
-      var ptgl_input = document.getElementById('tgl_input_tambah_buku').value;
-      // alert(pid);
+      // alert(pisbn);
 
       $.ajax({
         type: 'POST',
         // url: '../hapusAnggota.php',
         url: './page/buku/simpan_tambah.php',
         data: {
-          'id': pid,
+					'isbn': pisbn,
           'judul': pjudul,
           'pengarang': ppengarang,
           'penerbit': ppenerbit,
           'tahun_terbit': ptahun_terbit,
-          'isbn': pisbn,
           'jumlah_buku': pjumlah_buku,
-          'lokasi': plokasi,
-          'tgl_input': ptgl_input
+          'lokasi': plokasi
         }
       });
 

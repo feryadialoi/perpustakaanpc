@@ -1,17 +1,16 @@
+<!-- btn tambah buku baru -->
 <?php include '../function.php'; ?>
-<!-- transaksi status kembali Bulanan -->
-<!-- <a class="btn btn-primary" style="margin-bottom: 10px" href="?page=laporan&aksi=transaksi"><i class="material-icons md-18">chevron_left</i> Kembali</a> -->
-<a class="btn btn-primary" style="margin-bottom: 10px" href="?page=laporan"><i class="material-icons md-18">chevron_left</i> Kembali</a>
+<a href="?page=peminjaman&aksi=tambah" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">add</i> Tambah Peminjaman</a>
 
 <div class="row">
 <div class="col-md-12">
 <div class="panel panel-default">
   <div class="panel-heading">
-     <h1>Laporan Peminjaman Berstatus Kembali</h1>
+     <h1>Data Peminjaman</h1>
    </div>
    <div class="panel-body">
     <div class="table-responsive">
-      <table class="table table-striped table-bordered table-hover">
+      <table class="table table-striped table-bordered table-hover" id="dataTables-example">
         <thead>
           <tr>
               <th>No</th>
@@ -22,7 +21,7 @@
               <th>Tanggal Kembali</th>
               <th>Terlambat</th>
               <th>Status</th>
-              <!-- <th>Aksi </th> -->
+              <th>Aksi </th>
           </tr>
         </thead>
           <!-- fetching item dari database ke form -->
@@ -30,8 +29,7 @@
 
             <?php
             $no = 1;
-            // $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE status = 'kembali' AND tgl_pinjam BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()");
-            $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE status = 'kembali'");
+            $sql = $conn -> query("SELECT * FROM tb_peminjaman WHERE status='pinjam'");
             while ($data= $sql-> fetch_assoc()){
             ?>
             <tr>
@@ -54,15 +52,15 @@
                 if($lambat>0){
                   echo "<font color='red'>$lambat hari<br>(Rp $denda_a)</font>";
                 }else{
-                  echo $lambat . "Hari";
+                  echo $lambat . " Hari";
                 }
                 ?>
               </td>
               <td><?php echo $data['status'];?></td>
-              <!-- <td>
-                 <a href="?page=transaksi&aksi=perpanjang&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>&lambat=<?php echo $lambat; ?>&tgl_kembali=<?php echo $data['tgl_kembali']; ?>" class="btn btn-info"><i class="material-icons md-18">next_week</i> Perpanjang</a>
-                 <a href="?page=transaksi&aksi=kembali&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>" class="btn btn-info"><i class="material-icons md-18">check</i> Kembalikan</a>
-              </td> -->
+              <td>
+                 <a href="?page=peminjaman&aksi=perpanjang&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>&lambat=<?php echo $lambat; ?>&tgl_kembali=<?php echo $data['tgl_kembali']; ?>" class="btn btn-primary"><i class="material-icons md-18">next_week</i> Perpanjang</a>
+                 <a href="?page=peminjaman&aksi=kembali&id=<?php echo $data['id'];?>&judul=<?php echo $data['judul']; ?>" class="btn btn-primary"><i class="material-icons md-18">check</i> Kembalikan</a>
+              </td>
           <?php } ?>
           </tr>
         </tbody>
@@ -72,4 +70,3 @@
 </div>
 </div>
 </div>
-<a target="_blank" href="../laporan_transaksi_kembali.php" class="btn btn-primary" style="margin-bottom: 10px"><i class="material-icons md-18">print</i> Cetak Laporan</a>
